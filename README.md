@@ -12,6 +12,8 @@ Text Book: [Computing Skills for Biologists](https://computingskillsforbiologist
 
 [Text Book GitHub Repository](https://github.com/CSB-book/CSB)
 
+[Apply Win10 Ubuntu Settings To New Computer](https://github.com/cbirdlab/wlsUBUNTU_settings/blob/master/README.md)
+
 ## STUDENT LEARNING OUTCOMES AND ASSESSMENT
 Upon the successful completion of this course, students should be able to: 
 1.	Recognize, describe, and organize data into standard biological data structures
