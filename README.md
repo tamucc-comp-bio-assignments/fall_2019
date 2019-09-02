@@ -34,6 +34,6 @@ Project examples: automatically process data from experimental apparatus; image 
 ## [FULL SYLLABUS](https://github.com/comp-bio-fall-2019/Class_Info/blob/master/ComputingBiology_Syllabus_V3.pdf)
 
 * [08/30  Week00  Introduction & Data](https://github.com/comp-bio-fall-2019/Week00)
-  *[Assignment_0 Due 09/06](https://github.com/comp-bio-fall-2019/Week00/blob/master/assignment_0.md)
+  * [Assignment_0 Due 09/06](https://github.com/comp-bio-fall-2019/Week00/blob/master/assignment_0.md)
 
 * [09/06  Week01 Unix  ](https://github.com/comp-bio-fall-2019/Week01)
