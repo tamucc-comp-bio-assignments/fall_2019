@@ -32,3 +32,7 @@ Rather than having a final exam, graduate students are expected to complete a Fi
 Project examples: automatically process data from experimental apparatus; image analysis; automated reporting of experimental results; downloading and organizing data from online repositories; etc… 
 
 ## [FULL SYLLABUS](https://github.com/comp-bio-fall-2019/Class_Info/blob/master/ComputingBiology_Syllabus_V3.pdf)
+
+## SCHEDULE
+
+### Week00  Introduction & Data 08/30
