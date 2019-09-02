@@ -39,3 +39,4 @@ Project examples: automatically process data from experimental apparatus; image 
   * [Assignment_0 Due 09/06](https://github.com/comp-bio-fall-2019/Week00/blob/master/assignment_0.md)
 
 * [09/06  Week01 Unix  ](https://github.com/comp-bio-fall-2019/Week01)
+  * Assignment_1 Due 09/12
