@@ -47,6 +47,7 @@ Project examples: automatically process data from experimental apparatus; image 
 
 * 09/20  Week03 Unix III
   * Assignment_3,  Due 09/27
+  * Graduate Student Course Project Outline, Due 09/27
 
 * 09/27  Week04 Version Control w/ Git
   * Exam_1,  Due 10/04
