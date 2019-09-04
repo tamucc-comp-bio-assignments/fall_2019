@@ -43,4 +43,4 @@ Project examples: automatically process data from experimental apparatus; image 
   
 * 09/13  Week02 Unix II
   * Assignment_2  Due 09/20
-  * [Graduate Course Project Ideas Due 09/20](https://forms.office.com/Pages/ResponsePage.aspx?id=8frLNKZngUepylFOslULZlFZdbyVx8RLiPt1GobhHnlUOUo2UVRUMVgwTUlQMlpUQzUzOTIzME9LNi4u)
+  * [Graduate Student Course Project Ideas Due 09/20](https://forms.office.com/Pages/ResponsePage.aspx?id=8frLNKZngUepylFOslULZlFZdbyVx8RLiPt1GobhHnlUOUo2UVRUMVgwTUlQMlpUQzUzOTIzME9LNi4u)
