@@ -40,14 +40,15 @@ Project examples: automatically process data from experimental apparatus; image 
 
 * [09/06  Week01 Unix I](https://github.com/comp-bio-fall-2019/Week01)
   * [Assignment_1,  Due 09/13](https://github.com/comp-bio-fall-2019/Week01/blob/master/assignment_1.md)
-  * [Graduate Student Course Project Ideas, Due 09/13](https://forms.office.com/Pages/ResponsePage.aspx?id=8frLNKZngUepylFOslULZlFZdbyVx8RLiPt1GobhHnlUOUo2UVRUMVgwTUlQMlpUQzUzOTIzME9LNi4u)
+  * [Grad Student Course Project: Ideas, Due 09/13](https://forms.office.com/Pages/ResponsePage.aspx?id=8frLNKZngUepylFOslULZlFZdbyVx8RLiPt1GobhHnlUOUo2UVRUMVgwTUlQMlpUQzUzOTIzME9LNi4u)
   
 * 09/13  Week02 Unix II
   * Assignment_2,  Due 09/20
 
 * 09/20  Week03 Unix III
   * Assignment_3,  Due 09/27
-  * Graduate Student Course Project Outline, Due 09/27
+  * Grad Student Course Project: Plan/Outline, Due 09/27
 
 * 09/27  Week04 Version Control w/ Git
   * Exam_1,  Due 10/04
+  * Grad Student Course Project: GitHub Repo w/ ReadMe, Due 10/04
