@@ -53,3 +53,5 @@ Project examples: automatically process data from experimental apparatus; image 
   * Exam_1,  Due 10/04
   * [Install Anaconda & Jupyter](http://computingskillsforbiologists.com/setup/basic-programming/), Due 10/04
   * Grad Student Course Project: GitHub Repo w/ ReadMe, Due 10/04
+
+* [Summary of Response Results](https://github.com/comp-bio-fall-2019/Class_Info/blob/master/results_summaries.md)
