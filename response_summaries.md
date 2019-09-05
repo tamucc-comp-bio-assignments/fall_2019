@@ -1,4 +1,4 @@
-# Summaries of Results from Quizes, Mind Expanders, & Assignments
+# Summaries of Responses from Quizes, Mind Expanders, & Assignments
 
 ## Section I Welcome to the Matrix
 
