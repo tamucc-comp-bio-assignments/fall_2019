@@ -26,7 +26,7 @@
     ```
 
 ## Text Book Vs. Lecture Slides
-The [**Lecture_01 Slides**](https://github.com/tamucc-comp-bio/fall_2019/blob/master/lectures/Lecture01_WelcomeToTheMatrix.pdf) closely follow the book but there is some additional information that is not provided in the book (and vice versa). In the lecture slides, the `code blocks` are represented by green text on a black background, mimicking the terminal.
+* The [**Lecture_01 Slides**](https://github.com/tamucc-comp-bio/fall_2019/blob/master/lectures/Lecture01_WelcomeToTheMatrix.pdf) closely follow the book but there is some additional information that is not provided in the book (and vice versa). In the lecture slides, the `code blocks` are represented by green text on a black background, mimicking the terminal.
 
 ## IN CLASS EXERCISES
 
