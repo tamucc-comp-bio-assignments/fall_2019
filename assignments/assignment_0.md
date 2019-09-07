@@ -1,4 +1,6 @@
-# Assignment 0 Welcome to the Matrix
+# Assignment 0 
+
+## Due 09/06
 
 ## Computer Preparation
 * Win10
