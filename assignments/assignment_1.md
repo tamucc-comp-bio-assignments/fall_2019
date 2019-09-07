@@ -1,5 +1,7 @@
 # Assignment 1 
 
+## Due 09/13
+
 ## Computer Preparation
 * Win10
   * Log into your Ubuntu terminal.  _We will not use `gitbash` unless you can't get Ubuntu running._ You are in your home directory.
