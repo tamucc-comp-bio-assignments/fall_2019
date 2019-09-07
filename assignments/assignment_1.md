@@ -27,7 +27,7 @@
 
 Complete Mind Expander 01.03 and the exercise(s) by answering the question(s) in the online form and submitting.  You must be logged into your TAMUCC email account to have your identity attached to your answers. 
 
-The exercises in the online forms closely follow those in the book.  I do make minor modifications and provide tips in the online form.  To ensure that your work is saved, **_I highly recommend that you first record your answers in a text document in either Notepad++ or BBedit and save them to your computer_**.  For an excellently formatted example, see the solutions provided by the book in `~/CSB/unix/solutions`.
+The exercises in the online forms closely follow those in the book.  I do make minor modifications and provide tips in the online form.  To ensure that your work is saved, **_I highly recommend that you first record your answers in a text document in either [Notepad++ for Win10](https://notepad-plus-plus.org/download/v7.7.1.html) or [BBedit for Mac](https://www.barebones.com/products/bbedit/) and save them to your computer_**.  For an excellently formatted example, see the solutions provided by the book in `~/CSB/unix/solutions`.
 
 * [CSB Mind Expander 01.03](https://forms.office.com/Pages/ResponsePage.aspx?id=8frLNKZngUepylFOslULZlFZdbyVx8RLiPt1GobhHnlUOThBNjZNVzlGQUtJUzhYREZVSE5UVVJMNS4u)
 
