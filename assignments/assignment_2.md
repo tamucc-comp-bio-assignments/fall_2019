@@ -31,4 +31,4 @@ The exercises in the online forms closely follow those in the book.  I do make m
 
 * Exercise 1.10.4 Data Explorer
 
-**_You can resubmit your answers as neccessary_**
+
