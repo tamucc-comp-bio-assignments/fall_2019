@@ -40,3 +40,5 @@ We are also going to flip the classroom again next week. Flipping the classroom 
 Work through [**Chapter 1**](https://github.com/tamucc-comp-bio/fall_2019/blob/master/text_book_resources/ComputingSkillsforBiologists_Chapter1.pdf), starting after "Intermezzo 1.3", going to "Intermezzo 1.4" and complete the last mind expander for this chapter. 
 
 * [CSB Mind Expander 01.04](https://forms.office.com/Pages/ResponsePage.aspx?id=8frLNKZngUepylFOslULZlFZdbyVx8RLiPt1GobhHnlURVhQUzBWODVKR0VJTTE2WjlZN05ZTjhMRi4u)
+
+**_You can resubmit your answers as neccessary_**
