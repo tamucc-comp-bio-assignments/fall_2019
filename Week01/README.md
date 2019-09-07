@@ -1,6 +1,6 @@
 # Week01 UNIX
 
-### [Assignment 0](https://github.com/comp-bio-fall-2019/Week00/blob/master/assignment_0.md) is due at the beginning of this lecture
+### [Assignment 0](https://github.com/tamucc-comp-bio/fall_2019/blob/master/assignments/assignment_0.md) is due at the beginning of this lecture
 
 ## [Lecture 01 Slides](https://github.com/comp-bio-fall-2019/Week01/blob/master/Lecture01_WelcomeToTheMatrix.pdf)
 
@@ -66,7 +66,7 @@ cut -d ";" -f 2-6 $1 | \
 * [CSB Mind Expander 01.04](https://forms.office.com/Pages/ResponsePage.aspx?id=8frLNKZngUepylFOslULZlFZdbyVx8RLiPt1GobhHnlURVhQUzBWODVKR0VJTTE2WjlZN05ZTjhMRi4u)
 
 ## HOMEWORK
-* [Assignment_1, Due 09/13](https://github.com/comp-bio-fall-2019/Week01/blob/master/assignment_1.md)
+* [Assignment_1, Due 09/13](https://github.com/tamucc-comp-bio/fall_2019/blob/master/assignments/assignment_1.md)
 * [Graduate Student Course Project Ideas, Due 09/13](https://forms.office.com/Pages/ResponsePage.aspx?id=8frLNKZngUepylFOslULZlFZdbyVx8RLiPt1GobhHnlUOUo2UVRUMVgwTUlQMlpUQzUzOTIzME9LNi4u)
 
 
