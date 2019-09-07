@@ -5,11 +5,11 @@
   * Log into your Ubuntu terminal.  _We will not use `gitbash` unless you can't get Ubuntu running._ You are in your home directory. If the Ubuntu app is not installed, then follow [these instructions](https://github.com/cbirdlab/wlsUBUNTU_settings/blob/master/InstallLinuxOnWindows_Automated.pdf)
 
   * If you are using an Ubuntu terminal that hasn't been setup (you'll know because it will ask you to create a new user name and password) or you notice odd cursor behavior when editing text in the terminal, then run the following code:
-  ```bash
-  git clone https://github.com/cbirdlab/wlsUBUNTU_settings.git
-  . ./wlsUBUNTU_settings/updateSettings.bash
-  rm -rf wlsUBUNTU_settings
-  ```
+    ```bash
+    git clone https://github.com/cbirdlab/wlsUBUNTU_settings.git
+    . ./wlsUBUNTU_settings/updateSettings.bash
+    rm -rf wlsUBUNTU_settings
+    ```
   
   * If the `CSB` directory does not exist in your home directory (check with `ls`), then run the following code to clone the `CSB` repository into your home directory:
     ```bash
