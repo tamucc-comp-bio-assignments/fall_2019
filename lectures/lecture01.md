@@ -17,7 +17,6 @@
     ```bash
     git clone https://github.com/CSB-book/CSB.git
     ```
-
 * MacOS
   * Open a terminal window
   * Consider installing [homebrew](https://brew.sh/).  You will be able to use homebrew to install linux software, such as `tree`, which is used in the slide show.
