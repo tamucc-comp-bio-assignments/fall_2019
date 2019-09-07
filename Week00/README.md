@@ -1,5 +1,5 @@
 # Week_00 INTRODUCTION & DATA
-## [Lecture_00 Slides](https://github.com/comp-bio-fall-2019/Week00/blob/master/Lecture00_Overview_BigData.pdf)
+## [Lecture_00 Slides](https://github.com/tamucc-comp-bio/fall_2019/blob/master/lecture_slides/Lecture00_Overview_BigData.pdf)
 
 This link will download today's lecture slides to your computer.
 
@@ -32,4 +32,4 @@ This should have already been done on the computers in the lab.
 
 These text editors are very handy for viewing and editing code
 
-## Please complete [Assignment_0](https://github.com/comp-bio-fall-2019/Week00/blob/master/assignment_0.md) before the next class
+## Please complete [Assignment_0](https://github.com/tamucc-comp-bio/fall_2019/blob/master/assignments/assignment_0.md) before the next class
