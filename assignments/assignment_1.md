@@ -42,3 +42,9 @@ Work through [**Chapter 1**](https://github.com/tamucc-comp-bio/fall_2019/blob/m
 * [CSB Mind Expander 01.04](https://forms.office.com/Pages/ResponsePage.aspx?id=8frLNKZngUepylFOslULZlFZdbyVx8RLiPt1GobhHnlURVhQUzBWODVKR0VJTTE2WjlZN05ZTjhMRi4u)
 
 * **_You can resubmit your answers as neccessary_**
+
+## Text Book Vs. Lecture Slides
+The [**Lecture_02 Slides**](https://github.com/tamucc-comp-bio/fall_2019/blob/master/lectures/Lecture02_WelcomeToTheMatrix.pdf) closely follow the book but there is some additional information that is not provided in the book (and vice versa). In the lecture slides, the `code blocks` are represented by green text on a black background, mimicking the terminal.
+
+* Page 35 **Use _BodyMass.csv_ (slides) rather than _BodyM.csv_ (book)**
+
