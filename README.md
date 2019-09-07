@@ -36,10 +36,10 @@ Project examples: automatically process data from experimental apparatus; image 
 ### Section 1.  Welcome to the Matrix
 
 * [08/30  Week00  Introduction & Data](https://github.com/comp-bio-fall-2019/Class_Info/blob/master/Week00/README.md)
-  * [Assignment_0  Due, 09/06](https://github.com/comp-bio-fall-2019/Class_Info/blob/master/Week00/assignment_0.md)
+  * [Assignment_0  Due, 09/06](https://github.com/tamucc-comp-bio/fall_2019/blob/master/assignments/assignment_0.md)
 
-* [09/06  Week01 Unix I](https://github.com/comp-bio-fall-2019/Week01)
-  * [Assignment_1,  Due 09/13](https://github.com/comp-bio-fall-2019/Week01/blob/master/assignment_1.md)
+* [09/06  Week01 Unix I](https://github.com/tamucc-comp-bio/fall_2019/tree/master/Week01)
+  * [Assignment_1,  Due 09/13](https://github.com/tamucc-comp-bio/fall_2019/blob/master/assignments/assignment_1.md)
   * [Grad Student Course Project: Ideas, Due 09/13](https://forms.office.com/Pages/ResponsePage.aspx?id=8frLNKZngUepylFOslULZlFZdbyVx8RLiPt1GobhHnlUOUo2UVRUMVgwTUlQMlpUQzUzOTIzME9LNi4u)
   
 * 09/13  Week02 Unix II
