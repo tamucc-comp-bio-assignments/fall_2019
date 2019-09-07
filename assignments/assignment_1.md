@@ -38,3 +38,5 @@ The exercises in the online forms closely follow those in the book.  I do make m
 We are also going to flip the classroom again next week. Flipping the classroom means that you work on the material to be covered before we address it in lecture. Then we can spend time in lecture going over the most challenging topics, as identified by you. Then we will continue together in lecture through new material that builds upon this assignment.
 
 Your final assignment is to work through [**Chapter 1**](https://github.com/tamucc-comp-bio/fall_2019/blob/master/text_book_resources/ComputingSkillsforBiologists_Chapter1.pdf) to "Intermezzo 1.4" and complete the last mind expander for this chapter. 
+
+* [CSB Mind Expander 01.04](https://forms.office.com/Pages/ResponsePage.aspx?id=8frLNKZngUepylFOslULZlFZdbyVx8RLiPt1GobhHnlURVhQUzBWODVKR0VJTTE2WjlZN05ZTjhMRi4u)
