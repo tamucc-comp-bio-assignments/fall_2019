@@ -33,7 +33,7 @@ Complete Exercise 1.10.4 Data Explorer (data from Buzzard *et al.*, 2016), and s
 Hints:
 
 * Start by cloning this repository to your computer
-* Copy the data requried for this exercise to the cloned repository, which is now a directory in your home dir.
+
 * **_I highly recommend that you create your script in a text document in either Notepad++ or BBedit_**.  
 * Make a copy of the `Buzzard2015_pseudo.md` document and a give it a new name as requested in the exercise or of your choosing.  It should end with an `.sh`
   * "Comment" the pseudo code using `#`
@@ -59,4 +59,3 @@ git push origin master
 Note that 
 * you can change the `commit` message to whatever you want (the part in quotations, but keep it brief
 * you will have to provide your github username and password for the `push` to `origin master`
-
