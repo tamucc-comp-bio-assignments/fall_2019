@@ -30,6 +30,8 @@ Complete Exercieses [1.10.2](https://forms.office.com/Pages/ResponsePage.aspx?id
 ### Extra Credit, worth 1 whole assignment (Due 09/20/2019):
 Complete Exercise 1.10.4 Data Explorer (data from Buzzard *et al.*, 2016), and submit script by updating your repository (see below). You may work in groups but each student must submit their own work.
 
+[Click on this Link to Initiate this Assignment](https://classroom.github.com/a/1id4ZoG_)
+
 Hints:
 
 * Start by cloning this repository to your computer
