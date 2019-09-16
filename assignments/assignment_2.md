@@ -25,6 +25,9 @@
     ```
 
 ## Description of Assignment
+Complete Exercieses [1.10.2](https://forms.office.com/Pages/ResponsePage.aspx?id=8frLNKZngUepylFOslULZlFZdbyVx8RLiPt1GobhHnlUQldJQTVHMTlYMFVYTkhZSDBZR1A0Q1E2Ny4u) and [1.10.3](https://forms.office.com/Pages/ResponsePage.aspx?id=8frLNKZngUepylFOslULZlFZdbyVx8RLiPt1GobhHnlUMlpVSUQ0U1hTSFZERDE1WUdZWjRYUlhaWi4u)
+
+### Extra Credit, worth 1 whole assignment:
 Complete Exercise 1.10.4 Data Explorer (data from Buzzard *et al.*, 2016), and submit script ____________. You may work in groups but each student must submit their own work.
 
 Hints:
