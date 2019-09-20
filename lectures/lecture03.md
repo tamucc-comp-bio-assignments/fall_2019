@@ -1,5 +1,7 @@
 # Week03 UNIX III - Beyond the CSB Text Book
 
+![alt text](https://github.com/tamucc-comp-bio/fall_2019/blob/master/lectures/Week03_files/3Dscan_limpetShell.PNG) ![alt text](https://github.com/tamucc-comp-bio/fall_2019/blob/master/lectures/Week03_files/3Dscan_limpetShell_left.PNG) ![alt text](https://github.com/tamucc-comp-bio/fall_2019/blob/master/lectures/Week03_files/3Dscan_limpetShell_right.PNG) ![alt text](https://github.com/tamucc-comp-bio/fall_2019/blob/master/lectures/Week03_files/3Dscan_limpetShell_top.PNG) ![alt text](https://github.com/tamucc-comp-bio/fall_2019/blob/master/lectures/Week03_files/3Dscan_limpetShell_bottom.PNG)
+
 ### [Assignment 2](https://github.com/tamucc-comp-bio/fall_2019/blob/master/assignments/assignment_2.md) is due at the beginning of this lecture
 
 ## Lecture 02 Slides
