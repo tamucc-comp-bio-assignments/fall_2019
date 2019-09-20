@@ -2,7 +2,7 @@
 
 ### [Assignment 2](https://github.com/tamucc-comp-bio/fall_2019/blob/master/assignments/assignment_2.md) is due at the beginning of this lecture
 
-## Lecture 02 Slides
+## Lecture 03 Slides
 * There are no slides this week, I'll post a recording here after lecture.
 
 ## Computer Preparation
