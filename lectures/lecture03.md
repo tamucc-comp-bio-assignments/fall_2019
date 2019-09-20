@@ -281,6 +281,7 @@ There are different regex languages (POSIX, PERL, etc) that have slight differen
 
 #### Clone [LimpetShell Evolution repo](https://github.com/tamucc-comp-bio/LimpetShellEvolution)
 ```bash
+cd ~
 git clone https://github.com/tamucc-comp-bio/LimpetShellEvolution.git
 ```
 
