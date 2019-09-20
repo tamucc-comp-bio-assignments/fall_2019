@@ -167,20 +167,16 @@ There are different regex languages (POSIX, PERL, etc) that have slight differen
     else
       echo 1 does not equal 2 
     fi
-  ```
-  
-  ```
   1 does not equal 2
-  ```
   
-  A="YES"
-  B=100
-  if [ "$A" != "$B" ]; then
-	echo $A does not equal $B
-  else
-    echo $A does equal $B 
-  fi  
-  
+  $ A="YES"
+    B=100
+    if [ "$A" != "$B" ]; then
+	  echo $A does not equal $B
+    else
+      echo $A does equal $B 
+    fi  
+  YES does not equal 100
   ```
   
 
