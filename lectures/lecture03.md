@@ -168,7 +168,9 @@ There are different regex languages (POSIX, PERL, etc) that have slight differen
       echo 1 does not equal 2 
     fi
   1 does not equal 2
+  ```
   
+  ```bash
   $ A="YES"
     B=100
     if [ "$A" != "$B" ]; then
@@ -178,7 +180,27 @@ There are different regex languages (POSIX, PERL, etc) that have slight differen
     fi  
   YES does not equal 100
   ```
-  
+
+#### A function allows you to define a new customized command composed of several existing commands
+  A function is a lot like a script, except you can define and use it within a script itself. You should make a function when you find yourself repeatedly using the same code over and over. 
+  Let us build upon the if-then-else logic in the last section to create a function that decides whether the two arguments passed to it are equal.
+  ```bash
+  $ DECIDER(){
+      A=$1
+	  B=$2
+      if [ "$A" != "$B" ]; then
+	    echo $A does not equal $B
+      else
+        echo $A does equal $B 
+      fi 
+    }
+  ```
+
+  After you complete the function, nothing will happen, but it has been stored into memory and can now be used.
+  ```bash
+  $ DECIDER 1 2
+  1 does not equal 2
+  ```
 
 ### Real World Application of Skills Learned: Fisheries-Induced Evolution (60 min)
 
