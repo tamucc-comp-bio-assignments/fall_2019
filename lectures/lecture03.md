@@ -162,15 +162,15 @@ There are different regex languages (POSIX, PERL, etc) that have slight differen
   
 #### Decision logic with if-then-else statements
   ```bash
-  if [ 1 == 2 ]; then
-	echo 1 does equal 2
-  else
-    echo 1 does not equal 2 
-  fi
+  $ if [ 1 == 2 ]; then
+	  echo 1 does equal 2
+    else
+      echo 1 does not equal 2 
+    fi
   ```
   
   ```
-  *1 does not equal 2*
+  1 does not equal 2
   ```
   
   A="YES"
