@@ -167,6 +167,11 @@ There are different regex languages (POSIX, PERL, etc) that have slight differen
   else
     echo 1 does not equal 2 
   fi
+  ```
+  
+  ```
+  *1 does not equal 2*
+  ```
   
   A="YES"
   B=100
