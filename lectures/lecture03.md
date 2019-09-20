@@ -195,8 +195,30 @@ There are different regex languages (POSIX, PERL, etc) that have slight differen
   * `\ `     Escape character, 
   
   ```bash
-  
+  # return contig names for either isogroup00001 or isogroup00002 in Marra data
+  $ grep 'isogroup0000[12]' Marra2014_data.fasta 
+  >contig00001  length=527  numreads=2  gene=isogroup00001  status=it_thresh
+  >contig00002  length=551  numreads=8  gene=isogroup00001  status=it_thresh
+  >contig00003  length=541  numreads=2  gene=isogroup00001  status=it_thresh
+  >contig00004  length=291  numreads=3  gene=isogroup00001  status=it_thresh
+  >contig00005  length=580  numreads=12  gene=isogroup00001  status=it_thresh
+  >contig00006  length=3288  numreads=35  gene=isogroup00001  status=it_thresh
+  >contig00008  length=1119  numreads=10  gene=isogroup00001  status=it_thresh
+  >contig00010  length=202  numreads=4  gene=isogroup00001  status=it_thresh
+  >contig00011  length=5563  numreads=61  gene=isogroup00001  status=it_thresh
   ```
+
+  ```bash
+  # return lines that begin with A
+  $ grep '^A' Marra2014_data.fasta 
+  ATCCTAGCTACTCTGGAGACTGAGGATTGAAGTTCAAAGTCAGCTCAAGCAAGAGATTTG
+  ACTGGAACTTTTTCCAACTGAAATAAATGGTAAACTTTTTATCCACCATTCTGCCATCTG
+  ACTCACAAAGACCCATGGGAATGGGTGATGAAATCCAACATGCTTCTTTGTAGCAAAAAT
+  AAATAAAATCCCCAGAAGGGTGAGGTAAATGGAAAACTCCAAACTCGCCCCTCAGGTGGG
+  AGGCGCTCCGTGGTAAAGTACGATCATCACCAATCTACCTATAAGAGAAACAGACTGGCT
+  AGGTTCCCCGGGGTGCCCGGCCCCACCACGTATGTGCACTCCGACTTCTCTGCAAACTTC
+  ```
+
 
 #### Basic addition and subtraction
   ```bash
