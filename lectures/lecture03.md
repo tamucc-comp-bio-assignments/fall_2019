@@ -279,6 +279,11 @@ There are different regex languages (POSIX, PERL, etc) that have slight differen
 
 #### [Draft Manuscript](https://github.com/tamucc-comp-bio/LimpetShellEvolution/blob/master/draft_Proof_hi-2.pdf)
 
+#### Clone [LimpetShell Evolution repo](https://github.com/tamucc-comp-bio/LimpetShellEvolution)
+```bash
+git clone https://github.com/tamucc-comp-bio/LimpetShellEvolution.git
+```
+
 ## HOMEWORK
 TBA
 
