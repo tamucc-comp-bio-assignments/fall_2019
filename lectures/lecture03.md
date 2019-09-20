@@ -31,7 +31,7 @@
 
 ### [Quiz (Time limit: 5 min)](https://forms.office.com/Pages/ResponsePage.aspx?id=8frLNKZngUepylFOslULZlFZdbyVx8RLiPt1GobhHnlUNEpSWTVNREU0N1IxUDNLU0tPMVYyUkpSRC4u)
 
-### Review of What We Have Learned
+### Review of What We Have Learned (Time Limit 15 minutes)
 
 1. There are several commands for navigating and manipulating a computer file directory 
   * `cd`    change directories
@@ -121,11 +121,46 @@
   bash script.sh ../data.txt
   ```
 
-### Exercise 1.10.3 (Time limit: 55 min)
+### Exercise 1.10.3 (Time limit: 40 min)
 We will review and complete this exercise together
 
 ### Additional Important Unix Commands and Intro to Regular Expressions for Pattern Matching (30 min)
 
+#### Paste is used for combining files by columns or converting a file with one column into a file with several columns
+  ```bash
+  
+  ```
+
+#### Sed is used to find a pattern and replace it with text or a specified pattern
+  ```bash
+  
+  ```
+
+#### Regular Expressions (regex) are sequences of characters that define search patterns.  
+There are different regex languages (POSIX, PERL, etc) that have slight differences in the meanings of different characters.  Regex is critical for `grep`, `sed`, and even `ls` and we will learn more regex later in the course.
+  * `^`     Beginning of line
+  * `$`     End of line
+  * `[]`    any of of the characters inside the square brackets are a match
+  * `.`     any character
+  * `*`     any number of repeats of the previous character
+  * `\ `     Escape character, 
+  
+  ```bash
+  
+  ```
+
+#### Basic addition and subtraction
+  ```bash
+  # addition
+  X=$((1+1))
+  echo $X
+  
+  # subtraction
+  Y=$((10-5))
+  echo $Y
+  ```
+  
+  
 
 ### Real World Application of Skills Learned: Fisheries-Induced Evolution (60 min)
 
