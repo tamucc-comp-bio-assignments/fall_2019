@@ -160,6 +160,23 @@ There are different regex languages (POSIX, PERL, etc) that have slight differen
   echo $Y
   ```
   
+#### Decision logic with if-then-else statements
+  ```bash
+  if [ 1 == 2 ]; then
+	echo 1 does equal 2
+  else
+    echo 1 does not equal 2 
+  fi
+  
+  A="YES"
+  B=100
+  if [ "$A" != "$B" ]; then
+	echo $A does not equal $B
+  else
+    echo $A does equal $B 
+  fi  
+  
+  ```
   
 
 ### Real World Application of Skills Learned: Fisheries-Induced Evolution (60 min)
