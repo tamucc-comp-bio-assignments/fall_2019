@@ -1,6 +1,6 @@
-# Assignment 2 
+# Assignment 3
 
-## Due 09/20
+## Due 09/27
 
 ## Computer Preparation
 * Win10
@@ -24,29 +24,19 @@
     git clone https://github.com/CSB-book/CSB.git
     ```
 
-## Description of Assignment
-Complete Exercieses [1.10.2](https://forms.office.com/Pages/ResponsePage.aspx?id=8frLNKZngUepylFOslULZlFZdbyVx8RLiPt1GobhHnlUQldJQTVHMTlYMFVYTkhZSDBZR1A0Q1E2Ny4u) and [1.10.3](https://forms.office.com/Pages/ResponsePage.aspx?id=8frLNKZngUepylFOslULZlFZdbyVx8RLiPt1GobhHnlUMlpVSUQ0U1hTSFZERDE1WUdZWjRYUlhaWi4u) which you started in class
+## GitHub Preparation
+* You must be a member of our class's github repository. If you are not a member (because you did not accept the initial invite) then please let me know and I'll reinvite you.  M
+* Make sure you are logged into github.
 
-### Extra Credit, worth 1 whole assignment (Due 09/20/2019):
-Complete Exercise 1.10.4 Data Explorer (data from Buzzard *et al.*, 2016), and submit script by updating your repository (see below). You may work in groups but each student must submit their own work.
+## Description of Assignment (Due 09/27/2019)
+* Clone the repository for this assignment to your home dir in your terminal. 
+* Ensure that the `admesh2tabdelimited.bash` script works by running it on the admesh.out data. This script converts the output of `admesh`, a unix command to extract information from 3D scans stored in `stl` files, into a "tidy" data file.
+* Complete the requested updates to the `admesh2tabdelimited.bash` 
+* I recommend troubleshooting after each change you make to the script
+* You may work in groups but each student must submit their own work.
 
 [Click on this Link to Initiate this Assignment](https://classroom.github.com/a/1id4ZoG_)
 
-Hints:
-
-* Start by cloning this repository to your computer
-
-* **_I highly recommend that you create your script in a text document in either Notepad++ or BBedit_**.  
-* Make a copy of the `Buzzard2015_pseudo.md` document and a give it a new name as requested in the exercise or of your choosing.  It should end with an `.sh`
-  * "Comment" the pseudo code using `#`
-* Add a shebang!
-* Use your terminal to play in this repository and construct/troubleshoot code
-* Copy and paste working code into your script in your text editor
-* I have noticed that the Win10-Ubuntu terminal does not like when you copy properly formatted code with leading tabs and spaces from your script in the text editor and paste it at the command line
-  * You can, however, copy and paste the lines without the leading tabs and spaces
-  * You can also create the script in the terminal using `nano` and paste in your properly formatted code to then run the script
-    * Win10 only, it is critical that you do not modify files in your Ubuntu directory structure with Win10
-	  * You can, however, move to your Win10 directory structure from the Win10-Ubunutu terminal and manipulate files as you wish `cd /mnt/c/Users/YOURUSERNAME`
 
 ### To `push` your changes to your repository on GitHub, and thus submit the assigment, do the following
 
