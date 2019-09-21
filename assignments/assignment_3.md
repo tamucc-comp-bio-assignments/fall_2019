@@ -25,7 +25,7 @@
     ```
 
 ## GitHub Preparation
-* You must be a member of our class's github repository. If you are not a member (because you did not accept the initial invite) then please let me know and I'll reinvite you.  M
+* You must be a member of our class's github repository. If you are not a member (because you did not accept the initial invite) then please let me know and I'll reinvite you. 
 * Make sure you are logged into github.
 
 ## Description of Assignment (Due 09/27/2019)
