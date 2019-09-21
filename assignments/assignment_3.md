@@ -1,4 +1,4 @@
-# Assignment 3
+# (Assignment 3](https://classroom.github.com/a/KHxwEJxn)
 
 ## Due 09/27
 
@@ -35,7 +35,7 @@
 * I recommend troubleshooting after each change you make to the script
 * You may work in groups but each student must submit their own work.
 
-[Click on this Link to Initiate this Assignment](https://classroom.github.com/a/1id4ZoG_)
+[Click on this Link to Initiate this Assignment](https://classroom.github.com/a/KHxwEJxn)
 
 
 ### To `push` your changes to your repository on GitHub, and thus submit the assigment, do the following
