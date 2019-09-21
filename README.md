@@ -47,7 +47,7 @@ Project examples: automatically process data from experimental apparatus; image 
 * [09/13  Week02 Unix II](https://github.com/tamucc-comp-bio/fall_2019/blob/master/lectures/lecture02.md)
   * [Assignment_2,  Due 09/20](https://github.com/tamucc-comp-bio/fall_2019/blob/master/assignments/assignment_2.md)
 
-* 09/20  Week03 Unix III
+* [09/20  Week03 Unix III](https://github.com/tamucc-comp-bio/fall_2019/blob/master/lectures/lecture03.md)
   * Assignment_3,  Due 09/27
   * Grad Student Course Project: Plan/Outline, Due 09/27
 
