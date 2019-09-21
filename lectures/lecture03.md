@@ -29,9 +29,9 @@
 
 ## In Class Activities
 
-### [Quiz (Time limit: 5 min)](https://forms.office.com/Pages/ResponsePage.aspx?id=8frLNKZngUepylFOslULZlFZdbyVx8RLiPt1GobhHnlUNEpSWTVNREU0N1IxUDNLU0tPMVYyUkpSRC4u)
+### [Quiz](https://forms.office.com/Pages/ResponsePage.aspx?id=8frLNKZngUepylFOslULZlFZdbyVx8RLiPt1GobhHnlUNEpSWTVNREU0N1IxUDNLU0tPMVYyUkpSRC4u)
 
-### Review of What We Have Learned (Time Limit 15 minutes)
+### Review of What We Have Learned
 
 1. There are several commands for navigating and manipulating a computer file directory 
   * `cd`    change directories
@@ -121,7 +121,7 @@
   bash script.sh ../data.txt
   ```
 
-### Additional Important Unix Commands and Intro to Regular Expressions for Pattern Matching (30 min)
+### Additional Important Unix Commands and Intro to Regular Expressions for Pattern Matching
 
 Let us all move to our `~/CSB/unix/sandbox` and copy the Marra and Dalziel data to the `sandbox` if it is not already there.
   ```bash
@@ -270,7 +270,7 @@ There are different regex languages (POSIX, PERL, etc) that have slight differen
   1 does not equal 2
   ```
 
-### Real World Application of Skills Learned: Fisheries-Induced Evolution (60 min)
+### Real World Application of Skills Learned: Fisheries-Induced Evolution
 
 ![alt text](https://github.com/tamucc-comp-bio/fall_2019/blob/master/lectures/Week03_files/3Dscan_limpetShell.PNG) ![alt text](https://github.com/tamucc-comp-bio/fall_2019/blob/master/lectures/Week03_files/3Dscan_limpetShell_left.PNG) ![alt text](https://github.com/tamucc-comp-bio/fall_2019/blob/master/lectures/Week03_files/3Dscan_limpetShell_right.PNG) ![alt text](https://github.com/tamucc-comp-bio/fall_2019/blob/master/lectures/Week03_files/3Dscan_limpetShell_top.PNG) ![alt text](https://github.com/tamucc-comp-bio/fall_2019/blob/master/lectures/Week03_files/3Dscan_limpetShell_bottom.PNG)
 
