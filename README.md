@@ -49,6 +49,7 @@ Project examples: automatically process data from experimental apparatus; image 
 
 * [09/20  Week03 Unix III](https://github.com/tamucc-comp-bio/fall_2019/blob/master/lectures/lecture03.md)
   * [Assignment_3,  Due 09/27](https://github.com/tamucc-comp-bio/fall_2019/blob/master/assignments/assignment_3.md)
+  * [Request Account On TAMUCC Super Computer](http://hpc.tamucc.edu/)
   * [Grad Student Course Project: Plan/Outline, Due 09/27](https://classroom.github.com/a/T1p9O1qg)
 
 * 09/27  Week04 Version Control w/ Git
