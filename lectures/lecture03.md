@@ -283,5 +283,5 @@ git clone https://github.com/tamucc-comp-bio/LimpetShellEvolution.git
 ```
 
 ## HOMEWORK
-[Assignment 3](https://github.com/tamucc-comp-bio/fall_2019/blob/master/assignments/assignment_3.md)
+[Assignment 3  Due 9/27](https://github.com/tamucc-comp-bio/fall_2019/blob/master/assignments/assignment_3.md)
 
