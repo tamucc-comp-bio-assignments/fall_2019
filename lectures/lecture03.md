@@ -121,9 +121,6 @@
   bash script.sh ../data.txt
   ```
 
-### Exercise 1.10.3 (Time limit: 40 min)
-We will review and complete this exercise together
-
 ### Additional Important Unix Commands and Intro to Regular Expressions for Pattern Matching (30 min)
 
 Let us all move to our `~/CSB/unix/sandbox` and copy the Marra and Dalziel data to the `sandbox` if it is not already there.
