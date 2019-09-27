@@ -51,9 +51,10 @@ ___
 
 #### Getting Started with Git
 
-![alt text](https://github.com/tamucc-comp-bio/fall_2019/blob/master/lectures/Week04_files/.jpg)
-
 ![alt text](https://github.com/tamucc-comp-bio/fall_2019/blob/master/lectures/Week04_files/gitlogo.jpg)
+
+![alt text](https://github.com/tamucc-comp-bio/fall_2019/blob/master/lectures/Week04_files/githublogo.jpg)
+
 
 Git is a version control tool and GitHub is a website that uses git.  Git is popular, free, open source, and GitHub is a paid service that is free for educational use.
 
