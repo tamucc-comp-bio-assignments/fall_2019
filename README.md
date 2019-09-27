@@ -52,7 +52,7 @@ Project examples: automatically process data from experimental apparatus; image 
   * [Request Account On TAMUCC Super Computer Due 9/27](http://hpc.tamucc.edu/)
   * [Grad Student Course Project: Plan/Outline, Due 09/27](https://classroom.github.com/a/T1p9O1qg)
 
-* 09/27  Week04 Version Control w/ Git
+* [09/27  Week04 Version Control w/ Git](https://github.com/tamucc-comp-bio/fall_2019/blob/master/lectures/lecture04.md)
   * Exam_1,  Due 10/04
   * [Install Anaconda & Jupyter](http://computingskillsforbiologists.com/setup/basic-programming/), Due 10/04
   * Grad Student Course Project: GitHub Repo w/ ReadMe, Due 10/04
