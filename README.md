@@ -53,7 +53,7 @@ Project examples: automatically process data from experimental apparatus; image 
   * [Grad Student Course Project: Plan/Outline, Due 09/27](https://classroom.github.com/a/T1p9O1qg)
 
 * [09/27  Week04 Version Control w/ Git](https://github.com/tamucc-comp-bio/fall_2019/blob/master/lectures/lecture04.md)
-  * Exam_1,  Due 10/04
+  * [Exam_1,  Due 10/04](https://github.com/tamucc-comp-bio/fall_2019/blob/master/assignments/exam_1.md)
   * [Install Anaconda & Jupyter](http://computingskillsforbiologists.com/setup/basic-programming/), Due 10/04
   * Grad Student Course Project: GitHub Repo w/ ReadMe, Due 10/04
 
