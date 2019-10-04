@@ -553,29 +553,29 @@ Sets are lists without diplicated entries and have special operators.
 * Difference - values unshared between set 1 and 2
 
   ```python
-# create a list
->>> a = [5, 6, 7, 7, 7, 8, 9, 9]
-# make a set from the list
->>> b = set(a)
->>> b
-{5, 6, 7, 8, 9}
+  # create a list
+  >>> a = [5, 6, 7, 7, 7, 8, 9, 9]
+  # make a set from the list
+  >>> b = set(a)
+  >>> b
+  {5, 6, 7, 8, 9}
 
-# intersection 
->>> c = {3, 4, 5, 6}
->>> b & c
-{5, 6}
+  # intersection 
+  >>> c = {3, 4, 5, 6}
+  >>> b & c
+  {5, 6}
 
-# union
->>> b | c
-{3, 4, 5, 6, 7, 8, 9}
+  # union
+  >>> b | c
+  {3, 4, 5, 6, 7, 8, 9}
 
-# difference
->>> b ^ c
-{3, 4, 7, 8, 9}
-```
+  # difference
+  >>> b ^ c
+  {3, 4, 7, 8, 9}
+  ```
 
 The union, intersection, and difference operators also exist as *methods*. You can also test whether a set is a *subset* or a *superset*. 
-```python
+  ```python
   # create sets using {}
   >>> s1 = {1, 2, 3, 4}
   >>> s2 = {4, 5, 6}
@@ -606,25 +606,25 @@ Note that calling `a = {}` creates and empty dictionary, not an empty set. `a = 
 #### Summary of Data Structures
 
   ```python
-# round brackets -> tuple
->>> type((1, 2))
-<class 'tuple'>
+  # round brackets -> tuple
+  >>> type((1, 2))
+  <class 'tuple'>
 
-# square brackets -> list
->>> type([1, 2])
-<class 'list'>
+  # square brackets -> list
+  >>> type([1, 2])
+  <class 'list'>
 
-# curly brackets, seq of vals -> set
->>> type({1, 2})
-<class 'set'>
+  # curly brackets, seq of vals -> set
+  >>> type({1, 2})
+  <class 'set'>
 
-# curly brackets, key:value pairs -> dictionary
->>> type({1: "a", 2: "b"})
-<class 'dict'>
->>> one = (1, 2, "tuple")
->>> two = [3, 4, "list"]
->>> three = {5: ["value1"], 6: ["value2"]}   # a dictionary
-```
+  # curly brackets, key:value pairs -> dictionary
+  >>> type({1: "a", 2: "b"})
+  <class 'dict'>
+  >>> one = (1, 2, "tuple")
+  >>> two = [3, 4, "list"]
+  >>> three = {5: ["value1"], 6: ["value2"]}   # a dictionary
+  ```
 
 The next level: Lists can also contain other lists, tuples, dictionaries.  If you think about it, a table is a list of lists.
   ```python
