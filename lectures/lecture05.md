@@ -140,6 +140,7 @@ When text strings have single and double quotes, encapsulate the string in 3 add
 #### Variable Assignment
 
 Variable assignment works much like `bash`
+<<<<<<< HEAD
   ```python
   >>> x = 5
   >>> x
@@ -149,6 +150,18 @@ Variable assignment works much like `bash`
   >>> vars()   #works in python, not jupyter. others: globals(), locals(), dir()
   {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <class '_frozen_importlib.BuiltinImporter'>, '__spec__': None, '__annotations__': {}, '__builtins__': <module 'builtins' (built-in)>, 'x': 5}
   ```
+=======
+	```python
+	>>> x = 5
+	>>> x
+	5
+	
+	>>> who   #show user-defined variables, jupyter notebook only
+	x
+	>>> vars()   #works in python, not jupyter. others: globals(), locals(), dir()
+	{'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <class '_frozen_importlib.BuiltinImporter'>, '__spec__': None, '__annotations__': {}, '__builtins__': <module 'builtins' (built-in)>, 'x': 5}
+	```
+>>>>>>> 89a4176575b5584fb19e3a8fad523a0524fe1167
 
 Math with variables
   ```python
