@@ -338,9 +338,11 @@ Each element in a list is indexed, [starting at 0](http://python-history.blogspo
   # retrieve second value in `my_list`
   >>> my_list[1]
   2.44
+  
   # retrieve first value in `my_list`
   >>> my_list[0]
   3
+  
   # you will trigger an error if there is no element at the specified index
   >>> my_list[4]
   Traceback (most recent call last):
@@ -555,6 +557,7 @@ Sets are lists without diplicated entries and have special operators.
   ```python
   # create a list
   >>> a = [5, 6, 7, 7, 7, 8, 9, 9]
+  
   # make a set from the list
   >>> b = set(a)
   >>> b
@@ -579,24 +582,31 @@ The union, intersection, and difference operators also exist as *methods*. You c
   # create sets using {}
   >>> s1 = {1, 2, 3, 4}
   >>> s2 = {4, 5, 6}
+  
   # intersection
   >>> s1.intersection(s2)
   {4}
+  
   # union
   >>> s1.union(s2)
   {1, 2, 3, 4, 5, 6}
+  
   # symmetric difference
   >>> s1.symmetric_difference(s2)
   {1, 2, 3, 5, 6}
+  
   # difference
   >>> s1.difference(s2)
   {1, 2, 3}
+  
   #subset
   >>> s1.issubset(s2)
   False
+  
   #superset
   >>> s1.issuperset(s2)
   False
+  
   >>> s1.issubset(s1.union(s2))
   True
   ```
