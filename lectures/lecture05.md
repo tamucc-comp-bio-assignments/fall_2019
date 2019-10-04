@@ -65,7 +65,7 @@ ___
 ___
 
 
-## I. Lecture Slides
+## [I. Lecture Slides](https://github.com/tamucc-comp-bio/fall_2019/blob/master/lectures/Week05_files/Lecture05_BasicProgramming.pdf)
 
 ## II. Python Activities
 
