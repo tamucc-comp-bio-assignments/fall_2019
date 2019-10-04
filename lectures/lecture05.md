@@ -144,6 +144,7 @@ Variable assignment works much like `bash`
 	>>> x = 5
 	>>> x
 	5
+	
 	>>> who   #show user-defined variables, jupyter notebook only
 	x
 	>>> vars()   #works in python, not jupyter. others: globals(), locals(), dir()
