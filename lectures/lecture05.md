@@ -8,6 +8,8 @@
 ___
 
 ## Computer Preparation
+
+* Log into your TAMUCC email account
 * Win10
 	*`Anaconda` should be [installed](http://computingskillsforbiologists.com/setup/basic-programming/)
 		* In Win10-Ubuntu terminal, installation is a bit more challenging here is how to make it work
@@ -28,7 +30,7 @@ ___
 			conda install jupyter
 			```
 
-	* Jupyter Notebook
+	* Jupyter Notebook  (DONT USE JUPYTER NOTEBOOK)
 		* In Win10, goto start menu and select `Jupyter Notebook (Anaconda3)`
 		* In Win10-Ubunutu Terminal
 			```bash
@@ -36,6 +38,9 @@ ___
 			jupyter notebook
 			```
 		* In both, click `new` button in upper right corner, then `python3`
+	
+	* *Python*
+		* open ubuntu terminal and type `python3`
 
 	* If you are using an Ubuntu terminal that hasn't been setup (you'll know because it will ask you to create a new user name and password) or you notice odd cursor behavior when editing text in the terminal, then run the following code:
 		```bash
@@ -43,13 +48,14 @@ ___
 		../wlsUBUNTU_settings/updateSettings.bash
 		rm -rf wlsUBUNTU_settings
 		```
-  * If the `CSB` directory does not exist in your home directory (check with `ls`), then run the following code to clone the `CSB` repository into your home directory:
-    ```bash
-    git clone https://github.com/CSB-book/CSB.git
-    ```
+	* If the `CSB` directory does not exist in your home directory (check with `ls`), then run the following code to clone the `CSB` repository into your home directory:
+		```bash
+		git clone https://github.com/CSB-book/CSB.git
+		```
 * MacOS
 	*`Anaconda` should be [installed](http://computingskillsforbiologists.com/setup/basic-programming/)
-	* Launch jupyter notebook
+	* Launch jupyter notebook (DONT USE JUPYTER NOTEBOOK)
+	* open terminal and type `python3`
 
 * If the `CSB` directory does not exist in your home directory (check with `ls`), then run the following code to clone the `CSB` repository into your home directory:
   ```bash
@@ -58,13 +64,12 @@ ___
 
 ___
 
-## In Class Activities
 
-### I. Lecture Slides
+## I. Lecture Slides
 
-### II. Python Activities
+## II. Python Activities
 
-#### How to Get Help
+### How to Get Help
 
 	[docs.python.org](https://docs.python.org/3/)
 	[stackoverflow.com](https://stackoverflow.com/)
@@ -74,7 +79,7 @@ ___
 	```
 	Note: ctrl+d exits the help environment if you are using python (without jupyter notebook)
 
-#### Simple Calculations and Basic Data Types
+### Simple Calculations and Basic Data Types
 
 Math is much easier to code in `python` than `bash`.  The following code gives examples of some of the `python` data types
 	* Integers		round numbers
