@@ -169,16 +169,18 @@ Math with variables
   8
   >>> y = 8
   >>> x + y
-  16
+  13
   ```
 
 Variables can also store text, but unlike bash, you must use quotes in python. further, mathematical operators can be used to paste text together, but variable data types must be the same
+
   ```python
   >>> x = "The cell grew"
   >>> x + " and is now larger"
   ```
 
 You can not add a number and text together, unless the number is stored as a string or converted to a string
+
   ```python
   >>> x + y
   Traceback (most recent call last):
@@ -203,6 +205,7 @@ As you can see, str() changes the datatype to string.  Obviously, datatype is im
 #### Built-in Functions
 
 In `python`, each buitin function name is following by parentheses that encapsulate the arguments passed to the function
+
   ```python
   >>> s = "a long string"
   >>> len(s)          #length, number of characters
@@ -229,6 +232,7 @@ Python is has many useful functions for string manipulation.  We will start by m
   ```
   
 Python is "*object-oriented*", which means that each *object*, such as a *string variable*, has a set a functions specific to that *object*, called *methods*.  
+
   ```python
   #Press tab after the period to list methods
   >>> astring.
