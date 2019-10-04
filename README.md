@@ -57,4 +57,12 @@ Project examples: automatically process data from experimental apparatus; image 
   * [Install Anaconda & Jupyter, Due 10/04](http://computingskillsforbiologists.com/setup/basic-programming/), Due 10/04
   * [Grad Student Course Project: GitHub Repo w/ ReadMe, Due 10/04](https://github.com/tamucc-comp-bio/fall_2019/blob/master/assignments/gradproject_githubrep.md)
 
+---
+
+### Section 2. Programming the Matrix
+
+* [10/04  Week05 Basic Python Programming](https://github.com/tamucc-comp-bio/fall_2019/blob/master/lectures/lecture05.md)
+  * Assignment_5, Due 10/11
+  * Grad Student Course Project: Commit at least 1 working function to GitHub, Due 10/11
+
 * [Summaries of Responses](https://github.com/comp-bio-fall-2019/Class_Info/blob/master/response_summaries.md)
