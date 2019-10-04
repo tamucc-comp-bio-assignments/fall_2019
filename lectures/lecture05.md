@@ -140,7 +140,6 @@ When text strings have single and double quotes, encapsulate the string in 3 add
 #### Variable Assignment
 
 Variable assignment works much like `bash`
-<<<<<<< HEAD
   ```python
   >>> x = 5
   >>> x
@@ -150,20 +149,9 @@ Variable assignment works much like `bash`
   >>> vars()   #works in python, not jupyter. others: globals(), locals(), dir()
   {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <class '_frozen_importlib.BuiltinImporter'>, '__spec__': None, '__annotations__': {}, '__builtins__': <module 'builtins' (built-in)>, 'x': 5}
   ```
-=======
-	```python
-	>>> x = 5
-	>>> x
-	5
-	
-	>>> who   #show user-defined variables, jupyter notebook only
-	x
-	>>> vars()   #works in python, not jupyter. others: globals(), locals(), dir()
-	{'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <class '_frozen_importlib.BuiltinImporter'>, '__spec__': None, '__annotations__': {}, '__builtins__': <module 'builtins' (built-in)>, 'x': 5}
-	```
->>>>>>> 89a4176575b5584fb19e3a8fad523a0524fe1167
 
 Math with variables
+
   ```python
   >>> x + 3
   8
@@ -195,6 +183,7 @@ You can not add a number and text together, unless the number is stored as a str
   ```
 
 As you can see, str() changes the datatype to string.  Obviously, datatype is important in python
+
   ```python
   >>> z="88"
   >>> type(z)
@@ -254,11 +243,13 @@ Python is "*object-oriented*", which means that each *object*, such as a *string
   ```
   
 To learn more about a method, use `help`
+
   ```python
   >>> help(astring.find)
   ```
 
 Here are some examples of the string-specific methods
+
   ```python
   >>> astring.replace("T", "U")
   'AUGCAUG'
@@ -279,6 +270,7 @@ Here are some examples of the string-specific methods
   ```
 
 String methods can also be applied to strings that are not stored in variables
+
   ```python
   >>> "atgc".upper()
   'ATGC'
@@ -287,6 +279,7 @@ String methods can also be applied to strings that are not stored in variables
   ```
   
 Concatenate strings with + (slow) or `join` (fast)
+
   ```python
   >>> genus = "Rattus"
   >>> species = "norvegicus"
@@ -300,6 +293,7 @@ Concatenate strings with + (slow) or `join` (fast)
   ```
   
 Be careful not to confuse built-in *functions* with object-specific *methods*
+
   ```python
   >>> s = "ATGC"
   #call built in function print
