@@ -524,7 +524,9 @@ Thus, the shebang! is `/usr/local/bin/python3`
 
 ## [III.  Group Excercise](https://classroom.github.com/g/AjcPKTDS)
 
-Submit work by 3:30 pm, today
+Break up into groups of 3 or 4 and complete exercise 3.8.2.  The reward for the team that submits a working script first is 10 pts per person extra credit on the next exam.
+
+Submit work by 3:30 pm
 
 ---
 
