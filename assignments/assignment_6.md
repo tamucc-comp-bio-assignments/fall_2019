@@ -20,7 +20,6 @@
 ___
 
 ## Description of Assignment 
-## Description of Assignment 
 
 * Read Section 3.8 in CSB Text Book
 
