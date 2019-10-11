@@ -61,8 +61,10 @@ Project examples: automatically process data from experimental apparatus; image 
 
 ### Section 2. Programming the Matrix
 
-* [10/04  Week05 Basic Python Programming](https://github.com/tamucc-comp-bio/fall_2019/blob/master/lectures/lecture05.md)
+* [10/04  Week05 Basic Python Programming I](https://github.com/tamucc-comp-bio/fall_2019/blob/master/lectures/lecture05.md)
   * [Assignment_5, Due 10/11](https://github.com/tamucc-comp-bio/fall_2019/blob/master/assignments/assignment_5.md)
   * Grad Student Course Project: Commit at least 1 working function to your GitHub project repo, Due 10/11
+
+* 10/11  Week06 Basic Python Programming II
 
 * [Summaries of Responses](https://github.com/comp-bio-fall-2019/Class_Info/blob/master/response_summaries.md)
