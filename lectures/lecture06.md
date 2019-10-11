@@ -530,5 +530,5 @@ Submit work by 3:30 pm, today
 
 
 ## HOMEWORK
-Assignment 6  Due 10/18  Excercise 3.8.1
+[Assignment 6  Due 10/18  Excercise 3.8.1](https://github.com/tamucc-comp-bio/fall_2019/blob/master/assignments/assignment_6.md)
 
