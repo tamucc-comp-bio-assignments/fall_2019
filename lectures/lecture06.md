@@ -20,7 +20,7 @@
 ___
 
 
-## [I. Lecture Slides]()
+## I. Lecture Slides
 
 ## II. Python Activities
 
@@ -121,12 +121,12 @@ Note that the `...` are shown in your terminal and should not be typed in.
 	Not divisible by 2, 3, 5, 7
 	```
 
-### While and For Loops
+#### While and For Loops
 
 Loops are used to repeat a block of code several times, often with slight variations.
 
 While loops continue to run until a condition is met.  Again, indentation and empty lines are necessary syntax features
-	```python
+```python
 	#set x equal to zero
 	>>> x = 0
 	#while x is less than 100 print the value of x 
@@ -142,7 +142,7 @@ While loops continue to run until a condition is met.  Again, indentation and em
 	```
 
 While we are printing out the values of variables, this is for your edification.  We would usually replace the printing with some other code.
-	```python
+```python
 	>>> a = 1
 	>>> b = 1
 	>>> c = 0
@@ -176,7 +176,7 @@ While we are printing out the values of variables, this is for your edification.
 It is very possible to create an infinite loop, so before running you want to be sure that the loop will end.
 Use ctrl+c to stop an infinite loop
 
-	```python
+```python
 	>>> a = True
 	>>> while a:
 	...     print("Infinite loop")
@@ -187,7 +187,7 @@ Use ctrl+c to stop an infinite loop
 Loops can be combined with If Then logic statements and `break` will end a loop
 Here we search for the first value above 15000 and below 19000 that is divisible by 19
 
-	```python
+```python
 	x = 15000
 	>>> while x < 19000:
 	...     if x % 19 == 0:
@@ -201,7 +201,7 @@ Here we search for the first value above 15000 and below 19000 that is divisible
 `continue` skips the remaining code in 1 cycle of the loop
 Here, we print out the first 100 even numbers, counting from 0.  Note that it really matters where the line `found = found + 1` is placed
 
-	```python
+```python
 	x = 0
 	>>> x = 0
 	>>> found = 0
@@ -220,7 +220,7 @@ Here, we print out the first 100 even numbers, counting from 0.  Note that it re
 
 For loops work very similarly to those in `bash` but the syntax is slightly different.  Here we print all of the values in a list
 
-	```python
+```python
 	>>> z = [1, 5, "mystring", True]
 	>>> for x in z:
 	...     print(x)
@@ -233,7 +233,7 @@ For loops work very similarly to those in `bash` but the syntax is slightly diff
 
 When a string is presented to the For loop, it will iterate character by character
 
-	```python
+```python
 	>>> my_string = "a given string"
 	>>> for character in my_string:
 	...     print(character)
@@ -256,7 +256,7 @@ When a string is presented to the For loop, it will iterate character by charact
 
 To print the key:value pairs in a dictionary, we can use the `dictionary.items()` method which returns a list of tuples in conjuction with a for loop to iterate through the list
 
-	```python
+```python
 	>>> z = {0: "a", 1: "b", 2: "c"}
 	# view the list of tuples that .items() returns
 	>>> z.items()
@@ -272,7 +272,7 @@ To print the key:value pairs in a dictionary, we can use the `dictionary.items()
 
 The `range` function is useful to create a list of numbers for a For loop.  Note the non-intuitive behavior with the final value in the range.
 
-	```python
+```python
 	>>> list(range(10))
 	[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 	>>> list(range(1, 5))
