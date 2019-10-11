@@ -522,7 +522,7 @@ You should figure out where your python executable is and add a shebang! to your
 Thus, the shebang! is `/usr/local/bin/python3`
 
 
-III.  [Group Excercise](https://classroom.github.com/g/AjcPKTDS)
+## [III.  Group Excercise](https://classroom.github.com/g/AjcPKTDS)
 
 Submit work by 3:30 pm, today
 
