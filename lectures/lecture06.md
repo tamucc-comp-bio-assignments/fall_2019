@@ -79,9 +79,9 @@ The following is an overview of some of the many useful functions built into `py
 #### If Then Statements
 
 If then statements are used to conditionally run code (make decisions about which code should be run)
-Note that the `...` are shown in your terminal and should not be typed in.
+Note that the `...` are shown in your terminal and should not be typed.
 
-	```python
+```python
 	# pseudo code describing basic structure of if then statments, do not type
 	# the indentation and empty line after the if statement are both necessary syntax
 	if condition_is_true:
