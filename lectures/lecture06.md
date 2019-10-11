@@ -127,215 +127,215 @@ Loops are used to repeat a block of code several times, often with slight variat
 
 While loops continue to run until a condition is met.  Again, indentation and empty lines are necessary syntax features
 ```python
-	#set x equal to zero
-	>>> x = 0
-	#while x is less than 100 print the value of x 
-	>>> while x < 100:
-	...     print(x)
-	...     x = x + 1		# increase the value of x by 1, ensuring that the loop will end
-	...
-	0
-	1
-	2
-	.
-	99
-	```
+#set x equal to zero
+>>> x = 0
+#while x is less than 100 print the value of x 
+>>> while x < 100:
+...     print(x)
+...     x = x + 1		# increase the value of x by 1, ensuring that the loop will end
+...
+0
+1
+2
+.
+99
+```
 
 While we are printing out the values of variables, this is for your edification.  We would usually replace the printing with some other code.
 ```python
-	>>> a = 1
-	>>> b = 1
-	>>> c = 0
-	>>> while c < 10000:
-	...     c = a + b
-	...     a = b
-	...     b = c
-	...     print(c)
-	...
-	2
-	3
-	5
-	8
-	13
-	21
-	34
-	55
-	89
-	144
-	233
-	377
-	610
-	987
-	1597
-	2584
-	4181
-	6765
-	10946
-	```
+>>> a = 1
+>>> b = 1
+>>> c = 0
+>>> while c < 10000:
+...     c = a + b
+...     a = b
+...     b = c
+...     print(c)
+...
+2
+3
+5
+8
+13
+21
+34
+55
+89
+144
+233
+377
+610
+987
+1597
+2584
+4181
+6765
+10946
+```
 
 It is very possible to create an infinite loop, so before running you want to be sure that the loop will end.
 Use ctrl+c to stop an infinite loop
 
 ```python
-	>>> a = True
-	>>> while a:
-	...     print("Infinite loop")
-	...
-	Infinite loop
-	```
+>>> a = True
+>>> while a:
+...     print("Infinite loop")
+...
+Infinite loop
+```
 
 Loops can be combined with If Then logic statements and `break` will end a loop
 Here we search for the first value above 15000 and below 19000 that is divisible by 19
 
 ```python
-	x = 15000
-	>>> while x < 19000:
-	...     if x % 19 == 0:
-	...             print(str(x) + " is divisible by 19")
-	...             break
-	...     x = x + 1
-	...
-	15010 is divisible by 19
-	```
+x = 15000
+>>> while x < 19000:
+...     if x % 19 == 0:
+...             print(str(x) + " is divisible by 19")
+...             break
+...     x = x + 1
+...
+15010 is divisible by 19
+```
 
 `continue` skips the remaining code in 1 cycle of the loop
 Here, we print out the first 100 even numbers, counting from 0.  Note that it really matters where the line `found = found + 1` is placed
 
 ```python
-	x = 0
-	>>> x = 0
-	>>> found = 0
-	>>> while found < 100:
-	...     x = x + 1
-	...     if x % 2 == 1:
-	...             continue
-	...     print(x)
-	...     found = found + 1
-	...
-	2
-	4
-	.
-	200
-	```
+x = 0
+>>> x = 0
+>>> found = 0
+>>> while found < 100:
+...     x = x + 1
+...     if x % 2 == 1:
+...             continue
+...     print(x)
+...     found = found + 1
+...
+2
+4
+.
+200
+```
 
 For loops work very similarly to those in `bash` but the syntax is slightly different.  Here we print all of the values in a list
 
 ```python
-	>>> z = [1, 5, "mystring", True]
-	>>> for x in z:
-	...     print(x)
-	...
-	1
-	5
-	mystring
-	True
-	```
+>>> z = [1, 5, "mystring", True]
+>>> for x in z:
+...     print(x)
+...
+1
+5
+mystring
+True
+```
 
 When a string is presented to the For loop, it will iterate character by character
 
 ```python
-	>>> my_string = "a given string"
-	>>> for character in my_string:
-	...     print(character)
-	...
-	a
+>>> my_string = "a given string"
+>>> for character in my_string:
+...     print(character)
+...
+a
 
-	g
-	i
-	v
-	e
-	n
+g
+i
+v
+e
+n
 
-	s
-	t
-	r
-	i
-	n
-	g
-	```
+s
+t
+r
+i
+n
+g
+```
 
 To print the key:value pairs in a dictionary, we can use the `dictionary.items()` method which returns a list of tuples in conjuction with a for loop to iterate through the list
 
 ```python
-	>>> z = {0: "a", 1: "b", 2: "c"}
-	# view the list of tuples that .items() returns
-	>>> z.items()
-	dict_items([(0, 'a'), (1, 'b'), (2, 'c')])
-	#note here that two variables (`key` and `val`) can be specified with a list of comma delimited tuples for input
-	>>> for (key, val) in z.items():
-	...     print(key, "->", val)
-	...
-	0 -> a
-	1 -> b
-	2 -> c
-	```
+>>> z = {0: "a", 1: "b", 2: "c"}
+# view the list of tuples that .items() returns
+>>> z.items()
+dict_items([(0, 'a'), (1, 'b'), (2, 'c')])
+#note here that two variables (`key` and `val`) can be specified with a list of comma delimited tuples for input
+>>> for (key, val) in z.items():
+...     print(key, "->", val)
+...
+0 -> a
+1 -> b
+2 -> c
+```
 
 The `range` function is useful to create a list of numbers for a For loop.  Note the non-intuitive behavior with the final value in the range.
 
 ```python
-	>>> list(range(10))
-	[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-	>>> list(range(1, 5))
-	[1, 2, 3, 4]
-	>>> list(range(0, 10, 3))
-	[0, 3, 6, 9]
+>>> list(range(10))
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+>>> list(range(1, 5))
+[1, 2, 3, 4]
+>>> list(range(0, 10, 3))
+[0, 3, 6, 9]
 
-	>>> for x in range(10):
-	...     print(x ** 2)
-	...
-	0
-	1
-	4
-	9
-	16
-	25
-	36
-	49
-	64
-	81
-	```
+>>> for x in range(10):
+...     print(x ** 2)
+...
+0
+1
+4
+9
+16
+25
+36
+49
+64
+81
+```
 
 Recall that each element in a list has an index value.  `enumerate()` can be used to show the index and value associate with each element
 
 ```python
-	>>> list(enumerate(my_string))
-	[(0, 'a'), (1, ' '), (2, 'g'), (3, 'i'), (4, 'v'), (5, 'e'), (6, 'n'), (7, ' '), (8, 's'), (9, 't'), (10, 'r'), (11, 'i'), (12, 'n'), (13, 'g')]
-	>>> for k, x in enumerate(my_string):
-	...     print(k, x)
-	...
-	0 a
-	1
-	2 g
-	3 i
-	4 v
-	5 e
-	6 n
-	7
-	8 s
-	9 t
-	10 r
-	11 i
-	12 n
-	13 g
-	>>> z = [1, 5, "mystring", True]
-	>>> for element, value in enumerate(z):
-	...     print("element: " + str(element) + " value: " + str(value))
-	...
-	element: 0 value: 1
-	element: 1 value: 5
-	element: 2 value: mystring
-	element: 3 value: True
-	```
+>>> list(enumerate(my_string))
+[(0, 'a'), (1, ' '), (2, 'g'), (3, 'i'), (4, 'v'), (5, 'e'), (6, 'n'), (7, ' '), (8, 's'), (9, 't'), (10, 'r'), (11, 'i'), (12, 'n'), (13, 'g')]
+>>> for k, x in enumerate(my_string):
+...     print(k, x)
+...
+0 a
+1
+2 g
+3 i
+4 v
+5 e
+6 n
+7
+8 s
+9 t
+10 r
+11 i
+12 n
+13 g
+>>> z = [1, 5, "mystring", True]
+>>> for element, value in enumerate(z):
+...     print("element: " + str(element) + " value: " + str(value))
+...
+element: 0 value: 1
+element: 1 value: 5
+element: 2 value: mystring
+element: 3 value: True
+```
 
 You can apply the same function to all elements of list using _list comprehension_ 
 
-	```python
-	>>> a = [1, 2, 5, 14, 42, 132]
-	# calculate the square of each value in a and save it to b
-	>>> b = [x ** 2 for x in a]
-	>>> print(b)
-	[1, 4, 25, 196, 1764, 17424]
-	```
+```python
+>>> a = [1, 2, 5, 14, 42, 132]
+# calculate the square of each value in a and save it to b
+>>> b = [x ** 2 for x in a]
+>>> print(b)
+[1, 4, 25, 196, 1764, 17424]
+```
 
 ___
 
@@ -343,16 +343,16 @@ ___
 
 Hint: you can self check by modifying the for loops to calculate the number of loops
 
-	```python
-	for i in range(3, 17):
-		print("hello")
+```python
+for i in range(3, 17):
+	print("hello")
 
-	x=0
-	for i in range(3, 17):
-		x = x+1
+x=0
+for i in range(3, 17):
+	x = x+1
 
-	print(x)
-	```
+print(x)
+```
 
 ___
 
