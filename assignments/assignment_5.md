@@ -21,5 +21,5 @@ ___
 
 ## Description of Assignment (Due 10/11/2019)
 [Work through the rest of the chapter, sections 3.5-3.7](https://classroom.github.com/a/hAEY-izo)
-* Mind Expander 3.3
-* Mind Expander 3.4
+* Mind Expander (Intermezzo) 3.3
+* Mind Expander (intermezzo) 3.4
