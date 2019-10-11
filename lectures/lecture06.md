@@ -82,44 +82,44 @@ If then statements are used to conditionally run code (make decisions about whic
 Note that the `...` are shown in your terminal and should not be typed.
 
 ```python
-	# pseudo code describing basic structure of if then statments, do not type
-	# the indentation and empty line after the if statement are both necessary syntax
-	if condition_is_true:
-		execute_commands
-	elif other_condition_is_true:
-		other_commands
-	else:
-		commands_to_run_if_none_is_true
-	
-	```
-	
-	```python
-	>>> x = 4
-	... if x % 2 == 0:
-	...     print("Divisible by 2")
-	...
-	Divisible by 2
-	>>> x = 4
-	>>> if x % 2 == 0:
-	...     print("Divisible by 2")
-	... else:
-	...     print("Not divisible by 2")
-	...
-	Divisible by 2
+# pseudo code describing basic structure of if then statments, do not type
+# the indentation and empty line after the if statement are both necessary syntax
+if condition_is_true:
+	execute_commands
+elif other_condition_is_true:
+	other_commands
+else:
+	commands_to_run_if_none_is_true
 
-	>>> if x % 2 == 0:
-	...     print("Divisible by 2")
-	... elif x % 3 == 0:
-	...     print("Divisible by 3")
-	... elif x % 5 == 0:
-	...     print("Divisible by 5")
-	... elif x % 7 == 0:
-	...     print("Divisible by 7")
-	... else:
-	...     print("Not divisible by 2, 3, 5, 7")
-	...
-	Not divisible by 2, 3, 5, 7
-	```
+```
+
+```python
+>>> x = 4
+... if x % 2 == 0:
+...     print("Divisible by 2")
+...
+Divisible by 2
+>>> x = 4
+>>> if x % 2 == 0:
+...     print("Divisible by 2")
+... else:
+...     print("Not divisible by 2")
+...
+Divisible by 2
+
+>>> if x % 2 == 0:
+...     print("Divisible by 2")
+... elif x % 3 == 0:
+...     print("Divisible by 3")
+... elif x % 5 == 0:
+...     print("Divisible by 5")
+... elif x % 7 == 0:
+...     print("Divisible by 7")
+... else:
+...     print("Not divisible by 2, 3, 5, 7")
+...
+Not divisible by 2, 3, 5, 7
+```
 
 #### While and For Loops
 
