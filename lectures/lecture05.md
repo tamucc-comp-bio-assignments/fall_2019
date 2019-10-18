@@ -14,6 +14,7 @@ ___
   *`Anaconda` should be [installed](http://computingskillsforbiologists.com/setup/basic-programming/)
     * In Win10-Ubuntu terminal, installation is a bit more challenging here is how to make it work
     * Following `Anaconda` [download instructions](http://computingskillsforbiologists.com/setup/basic-programming/) with some modifications:
+    
       ```bash
       cd ~
       mkdir downloads
@@ -24,6 +25,7 @@ ___
       ```
     
     Restart ubunutu terminal
+    
       ```bash
       cd ~
       sudo chmod -R 777 anaconda3
@@ -33,10 +35,12 @@ ___
   * Jupyter Notebook  (DONT USE JUPYTER NOTEBOOK)
     * In Win10, goto start menu and select `Jupyter Notebook (Anaconda3)`
     * In Win10-Ubunutu Terminal
+    
       ```bash
       #navigate to directory where you want to launch programming/
       jupyter notebook
       ```
+      
     * In both, click `new` button in upper right corner, then `python3`
   
   * *Python*
