@@ -31,7 +31,7 @@ No lecture slides this week
 
 ## II. Lecture Activities 
 
-### Writing Code for Science
+### 4.1 Writing Code for Science
 
 * *Minimize errors by minimizing optimization*
 	* working is better than fastest
@@ -43,9 +43,9 @@ No lecture slides this week
 * *Use a profiler to identify code that needs optimizing*
 	* identify code that is too slow and needs to be sped up
 
-### Modules and Program Structure
+### 4.2 Modules and Program Structure
 
-#### Writing Functions
+#### 4.2.1 Writing Functions
 
 When dividing the complex task of making a program, it is important to avoid over and underdividing.
 
@@ -95,577 +95,395 @@ Anatomy of the `GCcontent()` function:
 	* `return` tells the function to output, or return, the result of the following code
 	* `numG + numC) / (numG + numC + numT + numA)` calculates the proportion of bases that are either G or C
 
-
-
 ```python
-
-whos
-GCcontent("AATTTCCCGGGAAA")
-GCcontent("ATGCATGCATGC")
+# show variables and functions in enviroment
+>>> globals()
+{'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <class '_frozen_importlib.BuiltinImporter'>, '__spec__': None, '__annotations__': {}, '__builtins__': <module 'builtins' (built-in)>, 'GCcontent': <function GCcontent at 0x7fc203307bf8>}
+>>> locals()
+{'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <class '_frozen_importlib.BuiltinImporter'>, '__spec__': None, '__annotations__': {}, '__builtins__': <module 'builtins' (built-in)>, 'GCcontent': <function GCcontent at 0x7fc203307bf8>}
 ```
 
-```python
+Use the `GCcontent()` function in your terminal.  Note that the DNA sequence you specify is loaded into the `dna` variable
 
+```python
+>>> GCcontent("AATTTCCCGGGAAA")
+0.42857142857142855
+>>> GCcontent("ATGCATGCATGC")
+0.5
 ```
 
-```python
-
-```
+Let us define more functions in your text editor, then copy and paste these new functions into your python3 terminal.  Fix any errors that occur in your text editor and try again.
 
 ```python
+#print a dictionary
+def print_dictionary(mydic):
+	for k, v in mydic.items():
+		print("key: ", k, " value: ", str(v))
 
-```
-
-```python
-
-```
-
-```python
-
-```
-
-```python
-
-```
-
-```python
-
-```
-
-```python
+#return a list with results
+def squared(start = 1, end = 10):
+	results = []
+	for i in range(start, end):
+		r = i ** 2
+		results.append(r)
+	return results
 
 ```
 
-```python
+Now we can test the functions
 
+```python
+>>> print_dictionary({"a": 3.4, "b": [1, 2, 3, 4], "c": "astring"})
+key:  a  value:  3.4
+key:  b  value:  [1, 2, 3, 4]
+key:  c  value:  astring
+
+>>> squared(start = 3, end = 10)
+[9, 16, 25, 36, 49, 64, 81]
+
+>>> squared(5)
+[25, 36, 49, 64, 81]
+
+>>> squared(end = 3)
+[1, 4]
+
+>>> squared()
+[1, 4, 9, 16, 25, 36, 49, 64, 81]
+```
+
+#### [Mind Expander 4.1](https://forms.office.com/Pages/ResponsePage.aspx?id=8frLNKZngUepylFOslULZlFZdbyVx8RLiPt1GobhHnlUMExGOVA0TUROVklLUlhKSUtaN0ZKS1UzNS4u)
+
+```python
+def foo1(x = 7):
+	return x ** 0.5
 ```
 
 ```python
-
+def foo2(x = 3, y = 5):
+	if x > y:
+		return x
+	return y
 ```
 
 ```python
-
+def foo3(x = 2, y = 0, z = 9):
+	if x > y:
+		tmp = y
+		y = x
+		x = tmp
+	if y > z:
+		tmp = z
+		z = y
+		y = tmp
+	if x > y:
+		tmp = y
+		y = x
+		x = tmp
+	return [x, y, z]
 ```
 
 ```python
-
+def foo4(x = 6):
+	result = 1
+	for i in range(1, x + 1):
+		result = result * i
+	return result
 ```
 
 ```python
-
+def foo5(x = 1729):
+	d = 2
+	myfactors = []
+	while x > 1:
+		if x % d == 0:
+			myfactors.append(d)
+			x = x / d
+		else:
+			d = d + 1
+	return myfactors
 ```
 
 ```python
+def foo6(x = 25):
+	if x == 1:
+		return 1
+	return x * foo6(x - 1)
+```
 
+```python
+def foo7(x = 100):
+	myp = [2]
+	for i in range(3, x + 1):
+		success = False
+		for j in myp:
+			if i % j == 0:
+				success = True
+				break
+		if success == False:
+			myp.append(i)
+	return myp
 ```
 
 
+#### 4.2.2 Importing Packages and Modules
+
+*Modules* are single files that contain multiple functions.
+
+*Packages* are collections of modules and can be imported into python to save you a lot of time. Last week we used the csv package.
+
+There are 4 different ways to to load a module. Below we will use generic terms like themodule, thefunction 
+	* `import themodule`
+	* `from themodule import thefunction`
+	* `import themodule as mm`
+		* gives the module the name mm
+	* `from themodule import *`
+
+You should definitely create your own modules to save you time.
 
 
-The following is an overview of some of the many useful functions built into `python`
+#### 4.2.3 Program Structure
 
-* max and min; use on string, list, tuple; returns largest or smallest number or character with largest or smallest associated numerical value
+When writing more complex programs, it is imperative to break them down into managable pieces that can be easily debugged, tested, and maintained.
 
-	```python
-	#make set a
-	>>> a = [5, 6, 7, 7, 7, 8, 9, 9]
-	>>> max(a)
-	9
-	>>> max(1.2, 3.71, 1.15)
-	3.71
-	>>> max("scientific computing")
-	'u'
-	>>> min("scientific computing")
-	' '
+We are going to simulate population of N monoecious, diploid, organisms.  We will focus on a gene with two alleles, A and a. 
+* To initialize the population, each individual will be assigned an A with probability p and a with probability of 1-p. 
+* At the end of each generation, individuals will randomly mate and die after reproducing.  
+* The popualtion size will remain stable and there will be no mutations.
+
+Once it is made, we can use the simulation to investigate genetic drift.
+
+To make the simulation, we will create functions, then use a "master" program to call the functions and orchestrate the simulation.
+
+The first step is not coding, it is strategizing and developing a plan of attack in plain English
+* Need a function to initialize the population
+	* inputs: popsize, prob of A
+	* returns: a list containing each diploid indiviudal.  e.g, [AA,AA,Aa,aa]
+* Need a function to compute genotypic frequencies 
+	* Inputs: the population
+	* Outputs: the count for each genotype
+* Need a reproduction function that 
+	* Inputs: current generation 
+	* Outputs: the next generation
+
+The second step is choosing data structures.
+* Population: list of tuples [("A", "a"), ("A", "A")]
+
+The third step is identifying modules that can be useful
+* `SciPy`
+
+We begin by building the population initialization function in our text editor, then test it in the python3 terminal
+
+```python
+# import scipy
+import scipy
+
+# make function to build population
+def build_population(N, p):
+	"""The population consists of N individuals.
+		Each individual has two chromosomes, containing
+		allele "A" or "a", with probability p or 1-p,
+		respectively.
+		The population is a list of tuples.
+	"""
+	population = []
+	for i in range(N):
+		allele1 = "A"
+		if scipy.random.rand() > p:
+			allele1 = "a"
+		allele2 = "A"
+		if scipy.random.rand() > p:
+			allele2 = "a"
+		population.append((allele1, allele2))
+	return population
+
+```
+
+Test the function by copying it from text editor and pasting it into python3 terminal then running the following code
+
+```python
+>>> build_population(N = 10, p = 0.7)
+[('A', 'A'), ('A', 'A'), ('a', 'A'), ('A', 'A'), ('A', 'a'), ('a', 'a'), ('a', 'a'), ('A', 'a'), ('A', 'a'), ('A', 'a')]
+```
+
+Next we build the function that computes genotype frequencies 
+
+```python
+def compute_frequencies(population):
+	""" Count the genotypes.
+		Returns a dictionary of genotypic frequencies.
+	"""
+	AA = population.count(("A", "A"))
+	Aa = population.count(("A", "a"))
+	aA = population.count(("a", "A"))
+	aa = population.count(("a", "a"))
+	return({"AA": AA,
+		"aa": aa,
+		"Aa": Aa,
+		"aA": aA})
+
+```
+
+Test the genotype function
+
+```python
+>>> my_pop = build_population(6, 0.5)
+>>> my_pop
+[('a', 'A'), ('A', 'A'), ('a', 'A'), ('a', 'a'), ('A', 'A'), ('A', 'a')]
+>>> compute_frequencies(my_pop)
+{'AA': 2, 'aa': 1, 'Aa': 1, 'aA': 2}
+```
+
+Build the reproduction fuction
+
+```python
+def reproduce_population(population):
+	""" Create new generation through reproduction
+		For each of N new offspring,
+		- choose the parents at random;
+		- the offspring receives a chromosome from
+		each of the parents.
+	"""
+	new_generation = []
+	N = len(population)
+	for i in range(N):
+		dad = scipy.random.randint(N)
+		mom = scipy.random.randint(N)
+		chr_mom = scipy.random.randint(2)
+		offspring = (population[mom][chr_mom], population [dad][1 - chr_mom])
+		new_generation.append(offspring)
+	return(new_generation)
 	
-	# check values of characters
-	>>> ord('z')
-	122
-	>>> ord('a')
-	97
-	>>> ord('Z')
-	90
-	```
-* sum; use on list or set; adds up values
+```
 
-	```python
-	>>> sum(a)
-	58
-	>>> sum(set([1, 1, 2, 3, 5, 8]))
-	19
-	```
-
-* in; use on strings, lists, tuples, dictionaries, and sets; tests for membership
-
-	```python
-	>>> "s" in "string"
-	True
-	>>> 36 not in [1, 2, 36]
-	False
-	>>> (1, 2) in [(1, 3), (1, 2), 1000, 'aaa']
-	True
-	>>> "z" in {"a": 1, "b": 2, "c": 3}
-	False
-	>>> "c" in {"a": 1, "b": 2, "c": 3}
-	True
-  ```
-
-### Program Flow
-
-#### If Then Statements
-
-If then statements are used to conditionally run code (make decisions about which code should be run)
-Note that the `...` are shown in your terminal and should not be typed.
+And test it
 
 ```python
-# pseudo code describing basic structure of if then statments, do not type
-# the indentation and empty line after the if statement are both necessary syntax
-if condition_is_true:
-	execute_commands
-elif other_condition_is_true:
-	other_commands
-else:
-	commands_to_run_if_none_is_true
-
+>>> reproduce_population(my_pop)
+[('A', 'A'), ('a', 'A'), ('A', 'A'), ('A', 'a'), ('A', 'A'), ('A', 'A')]
 ```
 
-```python
->>> x = 4
-... if x % 2 == 0:
-...     print("Divisible by 2")
-...
-Divisible by 2
->>> x = 4
->>> if x % 2 == 0:
-...     print("Divisible by 2")
-... else:
-...     print("Not divisible by 2")
-...
-Divisible by 2
+*Phew!!!  (out of breath)  *
 
->>> if x % 2 == 0:
-...     print("Divisible by 2")
-... elif x % 3 == 0:
-...     print("Divisible by 3")
-... elif x % 5 == 0:
-...     print("Divisible by 5")
-... elif x % 7 == 0:
-...     print("Divisible by 7")
-... else:
-...     print("Not divisible by 2, 3, 5, 7")
-...
-Not divisible by 2, 3, 5, 7
-```
+Save your module (the file with the functions we just made) into a file called `drift.py`. There is also a copy of this file in `~/CSB/good_code/solutions`.  
 
-#### While and For Loops
-
-Loops are used to repeat a block of code several times, often with slight variations.
-
-While loops continue to run until a condition is met.  Again, indentation and empty lines are necessary syntax features
-```python
-#set x equal to zero
->>> x = 0
-#while x is less than 100 print the value of x 
->>> while x < 100:
-...     print(x)
-...     x = x + 1		# increase the value of x by 1, ensuring that the loop will end
-...
-0
-1
-2
-.
-99
-```
-
-While we are printing out the values of variables, this is for your edification.  We would usually replace the printing with some other code.
-```python
->>> a = 1
->>> b = 1
->>> c = 0
->>> while c < 10000:
-...     c = a + b
-...     a = b
-...     b = c
-...     print(c)
-...
-2
-3
-5
-8
-13
-21
-34
-55
-89
-144
-233
-377
-610
-987
-1597
-2584
-4181
-6765
-10946
-```
-
-It is very possible to create an infinite loop, so before running you want to be sure that the loop will end.
-Use ctrl+c to stop an infinite loop
-
-```python
->>> a = True
->>> while a:
-...     print("Infinite loop")
-...
-Infinite loop
-```
-
-Loops can be combined with If Then logic statements and `break` will end a loop
-Here we search for the first value above 15000 and below 19000 that is divisible by 19
-
-```python
-x = 15000
->>> while x < 19000:
-...     if x % 19 == 0:
-...             print(str(x) + " is divisible by 19")
-...             break
-...     x = x + 1
-...
-15010 is divisible by 19
-```
-
-`continue` skips the remaining code in 1 cycle of the loop
-Here, we print out the first 100 even numbers, counting from 0.  Note that it really matters where the line `found = found + 1` is placed
-
-```python
-x = 0
->>> x = 0
->>> found = 0
->>> while found < 100:
-...     x = x + 1
-...     if x % 2 == 1:
-...             continue
-...     print(x)
-...     found = found + 1
-...
-2
-4
-.
-200
-```
-
-For loops work very similarly to those in `bash` but the syntax is slightly different.  Here we print all of the values in a list
-
-```python
->>> z = [1, 5, "mystring", True]
->>> for x in z:
-...     print(x)
-...
-1
-5
-mystring
-True
-```
-
-When a string is presented to the For loop, it will iterate character by character
-
-```python
->>> my_string = "a given string"
->>> for character in my_string:
-...     print(character)
-...
-a
-
-g
-i
-v
-e
-n
-
-s
-t
-r
-i
-n
-g
-```
-
-To print the key:value pairs in a dictionary, we can use the `dictionary.items()` method which returns a list of tuples in conjuction with a for loop to iterate through the list
-
-```python
->>> z = {0: "a", 1: "b", 2: "c"}
-# view the list of tuples that .items() returns
->>> z.items()
-dict_items([(0, 'a'), (1, 'b'), (2, 'c')])
-#note here that two variables (`key` and `val`) can be specified with a list of comma delimited tuples for input
->>> for (key, val) in z.items():
-...     print(key, "->", val)
-...
-0 -> a
-1 -> b
-2 -> c
-```
-
-The `range` function is useful to create a list of numbers for a For loop.  Note the non-intuitive behavior with the final value in the range.
-
-```python
->>> list(range(10))
-[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
->>> list(range(1, 5))
-[1, 2, 3, 4]
->>> list(range(0, 10, 3))
-[0, 3, 6, 9]
-
->>> for x in range(10):
-...     print(x ** 2)
-...
-0
-1
-4
-9
-16
-25
-36
-49
-64
-81
-```
-
-Recall that each element in a list has an index value.  `enumerate()` can be used to show the index and value associate with each element
-
-```python
->>> list(enumerate(my_string))
-[(0, 'a'), (1, ' '), (2, 'g'), (3, 'i'), (4, 'v'), (5, 'e'), (6, 'n'), (7, ' '), (8, 's'), (9, 't'), (10, 'r'), (11, 'i'), (12, 'n'), (13, 'g')]
->>> for k, x in enumerate(my_string):
-...     print(k, x)
-...
-0 a
-1
-2 g
-3 i
-4 v
-5 e
-6 n
-7
-8 s
-9 t
-10 r
-11 i
-12 n
-13 g
->>> z = [1, 5, "mystring", True]
->>> for element, value in enumerate(z):
-...     print("element: " + str(element) + " value: " + str(value))
-...
-element: 0 value: 1
-element: 1 value: 5
-element: 2 value: mystring
-element: 3 value: True
-```
-
-You can apply the same function to all elements of list using _list comprehension_ 
-
-```python
->>> a = [1, 2, 5, 14, 42, 132]
-# calculate the square of each value in a and save it to b
->>> b = [x ** 2 for x in a]
->>> print(b)
-[1, 4, 25, 196, 1764, 17424]
-```
-
-___
-
-#### Mind Expander (Intermezzo) 3.3
-
-Hint: you can self check by modifying the for loops to calculate the number of loops
-
-```python
-for i in range(3, 17):
-	print("hello")
-
-x=0
-for i in range(3, 17):
-	x = x+1
-
-print(x)
-```
-
-___
-
-
-### Working with Files
-
-Python is capable of opening, creating, and editing text files
-
-```python
-# open a file, if it does not exist, it is created
-# below *f* is a variable called a *file handle*, any variable name can be used
-# below the *w* stands for *writing*, open the file and allow it to be written
->>> f = open("mytextfile.txt", "w")
-
-# explore some of the methods for file handles
->>> f.name
-'mytextfile.txt'
->>> f.mode
-'w'
->>> f.encoding
-'UTF-8'
-
-# Modify the file, recall that \n means "end of line" or Line Feed (LF)
->>> s="Some text"
->>> f.write(s + "\n")
-10
-
-# Modify the file using a list, this will print A on one line, B on the next, ...
->>> f.writelines(["A\n", "B\n", "C\n"])
-
-# Close the file handle
->>> f.close()
-```
-
-To avoid forgetting to close a file, `with` can be employed which both opens and closes the file
-
-```
-# show file contents
->>> with open("mytextfile.txt", "r") as f:
-...     for my_line in f:
-...             print(my_line)
-...
-Some text
-
-A
-
-B
-
-C
-```
-
-With can also be used to make a copy of a file.
-
-```python
->>> inputfile = "mytextfile.txt"
->>> outputfile = "test1.txt"
->>> with open(inputfile, "r") as fr:
-...     with open(outputfile, "w") as fw:
-...             for line in fr:
-...                     fw.write(line)
-...
-10
-2
-2
-2
-```
-
-Realize that when you read a file, it is done progressively, after you read a line, you are taken to the next line
-
-```python
->>> f = open("mytextfile.txt", "r")
->>> f.readline()
-'Some text\n'
->>> f.readline()
-'A\n'
->>> f.readline()
-'B\n'
-
-# goto beginnning of file
->>> f.seek(0)
-0
->>> f.readline()
-'Some text\n'
->>> f.close
-```
-
-### Character-Delimited Files
-
-We will goto the `~/CSB/python/sandbox` dir to demonstrate how to interface with tidy data files
-
-```python
->>> import os
->>> os.chdir("CSB/python/sandbox")  # CSB must be in the pwd for this to work
-```
-
-You can also exit python, move to the `~/CSB/python/sandbox` dir in bash, then run python again
-
-To view the first few lines of a file:
-
-```python
->>> with open("../data/Dalziel2016_data.csv") as f:
-...     for i, line in enumerate(f):
-...             print(line.strip())
-...             if i > 2:
-...                     break
-...
-biweek,year,loc,cases,pop
-1,1906,BALTIMORE,NA,526822.1365
-2,1906,BALTIMORE,NA,526995.246
-3,1906,BALTIMORE,NA,527170.1981
-```
-
-Python includes special modules for handling tidy data.  We need to _import_ the _csv_ module to do this. Then we can use the .DictReader() method to convert each line of the tidy file into a dictionary
-
-```python
->>> import csv
-# open the file
->>> with open("../data/Dalziel2016_data.csv") as f:
-		# convert file to format where each line is a dictionary
-...     reader = csv.DictReader(f)
-		# read first 4 lines of convertd file
-...     for i, row in enumerate(reader):
-...             print(dict(row))
-...             if i > 2:
-...                     break
-...
-{'biweek': '1', 'year': '1906', 'loc': 'BALTIMORE', 'cases': 'NA', 'pop': '526822.1365'}
-{'biweek': '2', 'year': '1906', 'loc': 'BALTIMORE', 'cases': 'NA', 'pop': '526995.246'}
-{'biweek': '3', 'year': '1906', 'loc': 'BALTIMORE', 'cases': 'NA', 'pop': '527170.1981'}
-{'biweek': '4', 'year': '1906', 'loc': 'BALTIMORE', 'cases': 'NA', 'pop': '527347.0136'}
-```
-
-As a demonstration of how the csv module can be used, we can write all entries for *WASHINGTON* to a new file
-
-```python
-
->>> with open("../data/Dalziel2016_data.csv") as fr:
-...     reader = csv.DictReader(fr)
-		# save column header to variable
-...     header = reader.fieldnames
-...     with open("Dalziel2016_Washington.csv", "w") as fw:
-...             writer = csv.DictWriter(fw, fieldnames = header, delimiter = ",")
-...             for row in reader:
-...                     if row["loc"] == "WASHINGTON":
-...                             writer.writerow(row)
-
-```
-
-___
-
-#### Mind Expander (Intermezzo) 3.4
-
-___
-
-
-### Running a `Python` Script in `Bash`
-
-Last thing is how to run a python script from the bash terminal.
+Exit python and copy drift.py to your sandbox.
 
 ```bash
-python3 script.py
+cd ~/CSB/good_code/sandbox
+cp ../solutions/drift.py .
+python3
 ```
 
-You should figure out where your python executable is and add a shebang! to your file. Mine is in `/usr/local/bin`.  I tested this in bash by typing `ls /usr/local/bin/py` and hitting the tab key twice.
-Thus, the shebang! is `/usr/local/bin/python3`
+In your text editor, open a new document for making the master program that uses the functions we just made to simulate the population.
+
+Now we begin by importing our drift.py module
+
+```python
+import drift
+```
+
+and test that it worked
+
+```python
+>>> import drift
+>>> help(drift)
+```
+
+Write the main code:
+
+```python
+import drift
+def simulate_drift(N, p):
+	my_pop = drift.build_population(N, p)
+	fixation = False
+	num_generations = 0
+	while fixation == False:
+		genotype_counts = drift.compute_frequencies (my_pop)
+		if genotype_counts["AA"] == N or genotype_counts["aa"] == N:
+			print("An allele reached fixation at generation",
+			num_generations)
+			print("The genotype counts are")
+			print(genotype_counts)
+			fixation == True
+			break
+		my_pop = drift.reproduce_population(my_pop)
+		num_generations = num_generations + 1
+
+```
+
+test it
+
+```python
+>>> simulate_drift(100, 0.5)
+An allele reached fixation at generation 713
+The genotype counts are
+{'AA': 0, 'aa': 100, 'Aa': 0, 'aA': 0}
+
+>>> simulate_drift(100, 0.9)
+An allele reached fixation at generation 45
+The genotype counts are
+{'AA': 100, 'aa': 0, 'Aa': 0, 'aA': 0}
+```
+
+### 4.3 Writing Style
+
+Code is read more than it is written, and you should be thinking about the reader when writing your code (as well as your assignments for your courses and theses, and publications)
+
+Read ch 4.3.  here is where I disagree:
+
+* Use tabs for indenting (I know this is the opposite of the book), it will reduce variation in size of indents
 
 
-## [III.  Group Excercise](https://classroom.github.com/g/AjcPKTDS)
+### 4.4 Python from Command Line
 
-Break up into groups of 3 or 4 and complete exercise 3.8.2.  The reward for the team that submits a working script first is 10 pts per person extra credit on the next exam.
+Let us make our pop sim program executable. First save it to a file called simulate_drift.py in your sandbox.
 
-Submit work by 3:30 pm
+Next modify it as follows
+
+```python
+#!/usr/bin/python3
+
+import sys
+import drift
+
+def simulate_drift(N, p):
+        my_pop = drift.build_population(N, p)
+        fixation = False
+        num_generations = 0
+        while fixation == False:
+                genotype_counts = drift.compute_frequencies (my_pop)
+                if genotype_counts["AA"] == N or genotype_counts["aa"] == N:
+                        print("An allele reached fixation at generation",
+                        num_generations)
+                        print("The genotype counts are")
+                        print(genotype_counts)
+                        fixation == True
+                        break
+                my_pop = drift.reproduce_population(my_pop)
+                num_generations = num_generations + 1
+
+if __name__ == "__main__":
+        N = int(sys.argv[1])
+        p = float(sys.argv[2])
+        simulate_drift(N, p)
+```
+
+Make simulate_drift.py executable
+
+```bash
+chmod 700 simulate_drift.py
+```
+
+and then test it
+
+```python
+./simulate_drift.py 1000 0.1
+python simulate_drift.py 1000 0.1
+```
 
 ---
 
 
 ## HOMEWORK
-[Assignment 6  Due 10/18  Excercise 3.8.1](https://github.com/tamucc-comp-bio/fall_2019/blob/master/assignments/assignment_6.md)
+Assignment 7  Due 10/25  Finish Ch 4 and intermezzos
 
