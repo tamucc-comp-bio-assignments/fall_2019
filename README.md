@@ -68,5 +68,8 @@ Project examples: automatically process data from experimental apparatus; image 
 * [10/11  Week06 Basic Python Programming II](https://github.com/tamucc-comp-bio/fall_2019/blob/master/lectures/lecture06.md)
   * [Assignment 6, Due 10/18](https://github.com/tamucc-comp-bio/fall_2019/blob/master/assignments/assignment_6.md)
   * Grad Student Course Project: Commit at least 1 additional working function to your GitHub project repo, Due 10/18
-  
+
+* [10/18  Week07 Writing Good Code](https://github.com/tamucc-comp-bio/fall_2019/blob/master/lectures/lecture07.md)
+  * Assignment 7, Due 10/25
+    
 * [Summaries of Responses](https://github.com/comp-bio-fall-2019/Class_Info/blob/master/response_summaries.md)
