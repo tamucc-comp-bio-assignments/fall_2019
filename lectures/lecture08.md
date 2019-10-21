@@ -55,6 +55,93 @@ We are going to import some other functions to demonstrate debugging
 Now we are going to introduce a block of code with a bug. Type the following function into your text editor, then copy and paste it into the python terminal
 
 ```python
+def get_expected_sqrt_x(distribution = "uniform",
+		par1 = 0,
+		par2 = 1,
+		sample_size = 10):
+	""" Calculate the expectation of sqrt(|X|)
+	where X is a random variable.
+	X can be either uniform or normal,
+	with parameters specified by the user;
+	before taking the square root, we take the
+	absolute value, to make sure it's positive.
+	"""
+	total = 0.0
+	for i in range(sample_size):
+		if distribution == "uniform":
+			z = uniform(par1, par2, 1)
+		elif distribution == "normal":
+			z = normal(par1, par2, 1)
+		else:
+			print("Unknown distribution. Quitting...")
+			return None
+		total = total + sqrt(z)
+	return total / sample_size
+
+```
+
+If you've done it correctly, it should not return anything
+
+```python
+>>> def get_expected_sqrt_x(distribution = "uniform",
+...             par1 = 0,
+...             par2 = 1,
+...             sample_size = 10):
+...     """ Calculate the expectation of sqrt(|X|)
+...     where X is a random variable.
+...     X can be either uniform or normal,
+...     with parameters specified by the user;
+...     before taking the square root, we take the
+...     absolute value, to make sure it's positive.
+...     """
+...     total = 0.0
+...     for i in range(sample_size):
+...             if distribution == "uniform":
+...                     z = uniform(par1, par2, 1)
+...             elif distribution == "normal":
+...                     z = normal(par1, par2, 1)
+...             else:
+...                     print("Unknown distribution. Quitting...")
+...                     return None
+...             total = total + sqrt(z)
+...     return total / sample_size
+...
+>>>
+```
+
+Now run the function
+
+```python
+# the function probably won't throw an error with this input
+>>> get_expected_sqrt_x(sample_size = 100)
+0.6651831777616457
+
+# sometimes the function is broken, depending upon the random number selected
+>>> get_expected_sqrt_x(distribution = "normal", par1 = 1, par2 = 0.5, sample_size = 10)
+0.9288381624098158
+>>> get_expected_sqrt_x(distribution = "normal", par1 = 1, par2 = 0.5, sample_size = 10)
+0.9458732114559268
+>>> get_expected_sqrt_x(distribution = "normal", par1 = 1, par2 = 0.5, sample_size = 10)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 21, in get_expected_sqrt_x
+
+# if we increase the sample size, the function is broken nearly every time
+>>> get_expected_sqrt_x("normal", 1, 0.5, 1000)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 21, in get_expected_sqrt_x
+ValueError: math domain error
+```
+
+
+```python
+
+```
+
+
+
+```python
 def get_expected_sqrt_abs_x(distribution = "uniform",
 		par1 = 0,
 		par2 = 1,
@@ -77,46 +164,6 @@ def get_expected_sqrt_abs_x(distribution = "uniform",
 			return None
 		total = total + sqrt(abs(z))
 	return total / sample_size
-
-```
-
-If you've done it correctly, it should not return anything
-
-```python
->>> def get_expected_sqrt_abs_x(distribution = "uniform",
-...             par1 = 0,
-...             par2 = 1,
-...             sample_size = 10):
-...     """ Calculate the expectation of sqrt(|X|)
-...     where X is a random variable.
-...     X can be either uniform or normal,
-...     with parameters specified by the user;
-...     before taking the square root, we take the
-...     absolute value, to make sure it's positive.
-...     """
-...     total = 0.0
-...     for i in range(sample_size):
-...             if distribution == "uniform":
-...                     z = uniform(par1, par2, 1)
-...             elif distribution == "normal":
-...                     z = normal(par1, par2, 1)
-...             else:
-...                     print("Unknown distribution. Quitting...")
-...                     return None
-...             total = total + sqrt(abs(z))
-...     return total / sample_size
-...
->>>
-```
-
-
-```python
-
-```
-```python
-
-```
-```python
 
 ```
 ```python
