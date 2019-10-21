@@ -31,19 +31,105 @@ No lecture slides this week
 
 ## II. Lecture Activities 
 
-### 4.1 Writing Code for Science
+### 4.5 Writing Code for Science
 
-* *Minimize errors by minimizing optimization*
-	* working is better than fastest
-* *Make code readable by applying consistent formatting*
-	* python forces you to do this
-* *Complex tasks should be broken down into simple building blocks, i.e. functions*
-* *Use premade packages that do what you want to accomplish
-* *Use debugger and employ _unit testing_*
-* *Use a profiler to identify code that needs optimizing*
-	* identify code that is too slow and needs to be sped up
+*_FILL THIS IN_*
 
-### 4.2 Modules and Program Structure
+### 4.6 Debugging
+
+Python debugger can be imported at the python command line
+
+```python
+>>> import pdb
+
+```
+
+We are going to import some other functions to demonstrate debugging
+
+```python
+>>> from numpy.random import normal
+>>> from numpy.random import uniform
+>>> from math import sqrt
+```
+
+Now we are going to introduce a block of code with a bug. Type the following function into your text editor, then copy and paste it into the python terminal
+
+```python
+def get_expected_sqrt_abs_x(distribution = "uniform",
+		par1 = 0,
+		par2 = 1,
+		sample_size = 10):
+	""" Calculate the expectation of sqrt(|X|)
+	where X is a random variable.
+	X can be either uniform or normal,
+	with parameters specified by the user;
+	before taking the square root, we take the
+	absolute value, to make sure it's positive.
+	"""
+	total = 0.0
+	for i in range(sample_size):
+		if distribution == "uniform":
+			z = uniform(par1, par2, 1)
+		elif distribution == "normal":
+			z = normal(par1, par2, 1)
+		else:
+			print("Unknown distribution. Quitting...")
+			return None
+		total = total + sqrt(abs(z))
+	return total / sample_size
+
+```
+
+If you've done it correctly, it should not return anything
+
+```python
+>>> def get_expected_sqrt_abs_x(distribution = "uniform",
+...             par1 = 0,
+...             par2 = 1,
+...             sample_size = 10):
+...     """ Calculate the expectation of sqrt(|X|)
+...     where X is a random variable.
+...     X can be either uniform or normal,
+...     with parameters specified by the user;
+...     before taking the square root, we take the
+...     absolute value, to make sure it's positive.
+...     """
+...     total = 0.0
+...     for i in range(sample_size):
+...             if distribution == "uniform":
+...                     z = uniform(par1, par2, 1)
+...             elif distribution == "normal":
+...                     z = normal(par1, par2, 1)
+...             else:
+...                     print("Unknown distribution. Quitting...")
+...                     return None
+...             total = total + sqrt(abs(z))
+...     return total / sample_size
+...
+>>>
+```
+
+
+```python
+
+```
+```python
+
+```
+```python
+
+```
+```python
+
+```
+```python
+
+```
+```python
+
+```
+
+
 
 #### 4.2.1 Writing Functions
 
