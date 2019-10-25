@@ -1,6 +1,6 @@
 # Week08 Python Boot Camp II: Writing Good Code II
 
-### [Assignment5](https://github.com/tamucc-comp-bio/fall_2019/blob/master/assignments/assignment_5.md) is due at the beginning of this lecture
+###  Assignment7 is due at the beginning of this lecture
 
 
 ## Computer Preparation
@@ -377,14 +377,154 @@ AssertionError: Negative probability
 
 Identify the bug in the `genetic_code.py` script in `~/CSB/good_code/data`. Note that the script assumes you are in the `sandbox` dir. 
 
+
+## 4.7 Unit Testing
+
+Unit testing is the formalized testing of functions.  In unit testing, you write code to test each function.  As you change the code, there are internal checks that there were no unintended consequences.
+
+* Organize your functions.  If you have more than a few functions to run a program, then classify them (e.g., stats, input, simulations) into 1 module per classification.  Functions are where all the work is done.
+* Your main program will import these functions, calling them as necessary,  and should be fairly clean and easy to read.
+* Unit tests can be made for each module
+
+Let's look at adding unit testing to a simple function.  Type the following code into a new script, first in your text editor, then in `nano` and name it `CGcont.py` in your sandbox.
+
 ```python
-
+def CGcontent(DNA):
+	""" Return proportion of CG in sequence.
+	 Assumes that the DNA is uppercase containing
+	 ONLY A T G C
+	"""
+	CG = DNA.count("C") + DNA.count("G")
+	CG = CG / len(DNA)
+	return CG
 ```
+
+Now launch python and import the CGcont.py script as follows:
+
+```bash
+$ python3 -i CGcont.py
+```
+
+Run some tests where you can easily confirm that the answers are correct.
+
 ```python
-
+>>> CGcontent("AAAAAA")
+0.0
+>>> CGcontent("AAATTT")
+0.0
+>>> CGcontent("AAATTTCCCC")
+0.4
+>>> CGcontent("AAATTTCCC")
+0.3333333333333333
+>>>
 ```
 
+Now, modify your function with the results of the tests, as follows:
 
+```python
+def CGcontent(DNA):
+	""" Return proportion of CG in sequence.
+	 Assumes that the DNA is uppercase containing
+	 ONLY A T G C
+	=================================
+	Unit testing with docstrings
+	=================================
+	Run the command in python3, (e.g., python3 -i CGcont.py) and copy the
+	 output below:
+	>>> CGcontent("AAAAAA")
+	0.0
+	>>> CGcontent("AAATTT")
+	0.0
+	>>> CGcontent("AAATTTCCCC")
+	0.4
+	>>> CGcontent("AAATTTCCC")
+	0.333...
+	"""
+	CG = DNA.count("C") + DNA.count("G")
+	CG = CG / len(DNA)
+	return CG
+```
+
+And finally, you can run the unit testing from the bash shell like this:
+
+```bash
+$ python3 -m doctest -v CGcont.py
+Trying:
+    CGcontent("AAAAAA")
+Expecting:
+    0.0
+ok
+Trying:
+    CGcontent("AAATTT")
+Expecting:
+    0.0
+ok
+Trying:
+    CGcontent("AAATTTCCCC")
+Expecting:
+    0.4
+ok
+Trying:
+    CGcontent("AAATTTCCC")
+Expecting:
+    0.333...
+**********************************************************************
+File "/home/cbird/CSB/good_code/sandbox/CGcont2.py", line 16, in CGcont2.CGcontent
+Failed example:
+    CGcontent("AAATTTCCC")
+Expected:
+    0.333...
+Got:
+    0.3333333333333333
+1 items had no tests:
+    CGcont2
+**********************************************************************
+1 items had failures:
+   1 of   4 in CGcont2.CGcontent
+4 tests in 2 items.
+3 passed and 1 failed.
+***Test Failed*** 1 failures.
+```
+
+Finally, you can make the unit testing automatic by adding the following lines of code to the end of the script (in `nano`).  
+
+```python
+if __name__ == "__main__":
+	import doctest
+	doctest.testmod()
+```
+
+Then, every time the script is run with a -v, the unit testing occurs.
+
+```bash
+$ python3 CGcont.py -v
+```
+
+#### 4.7.3 More Complex Tests
+
+Since a dictionary is unordered and python randomly returns the keys of a dictionary, we are unlikely to pass the unit testing for functions that return dictionaries.  There is, however, a solution: save the dictionary to a variable, then test the variable:
+
+```python
+# since we haven't defined myfunction, this code is just an example
+>>> tmp = myfunction(x)
+>>> tmp == {'a': 1, 'b': 2, 'c': 3}
+True
+```
+
+Output that is governed by random numbers can be handled by setting the randome number seed so that the same result is obtained.
+
+```python
+import scipy
+def get_sample_mean(n):
+	""" For testing, we want to make sure we
+		set the seed of the random number generator:
+		>>> scipy.random.seed(1)
+		>>> get_sample_mean(10)
+		-0.0971...
+	"""
+	my_sample = scipy.random.normal(size = n)
+	return scipy.mean(my_sample)
+```
 
 #### 4.2.1 Writing Functions
 
