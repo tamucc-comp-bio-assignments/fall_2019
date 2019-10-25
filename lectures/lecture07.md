@@ -1,6 +1,6 @@
-# Week06 Python Boot Camp I: Basic Programming II
+# Week07 Python Boot Camp II: Writing Good Code I
 
-### [Assignment5](https://github.com/tamucc-comp-bio/fall_2019/blob/master/assignments/assignment_5.md) is due at the beginning of this lecture
+### Assignment6 is due at the beginning of this lecture
 
 
 ## Computer Preparation
