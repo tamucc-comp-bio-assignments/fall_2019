@@ -31,9 +31,42 @@ No lecture slides this week
 
 ## II. Lecture Activities 
 
-### 4.5 Writing Code for Science
+### 4.5 Errors and Exceptions
 
-*_FILL THIS IN_*
+If there is something wrong with your code, python will classify it as an *error* or and *exception*, and will provide useful feedback you can use to solve the problem.
+
+*Errors*: something is wrong with the syntax or grammar of the code
+* `SyntaxError`
+	* usually punctuation or equalities are incorrect
+* `IndentationError`
+* `TypeError`
+	* data type incorrect
+* `NameError`
+	* variable does not exist
+* `IndexError`
+	* element you tried to access (e.g., in a list) does not exist
+* `KeyError`
+	* key is not in dictionary
+* `IOError`
+	* tried to read file that doesn't exist
+	* tried to write a file that is open for reading
+* `AttributeError`
+	* tried to use a method that does not exist
+
+*Exceptions*: the syntax is correct, but a `Traceback` message is produced because the code cannot be executed
+
+#### Handling Exceptions
+
+
+```python
+>>> x = 6
+>>> y = 2.0
+>>> y / x
+0.3333333333333333
+>>> x = 0
+>>> y / x
+```
+
 
 ### 4.6 Debugging
 
