@@ -15,22 +15,22 @@ ___
     * In Win10-Ubuntu terminal, installation is a bit more challenging here is how to make it work
     * Following `Anaconda` [download instructions](http://computingskillsforbiologists.com/setup/basic-programming/) with some modifications:
     
-      ```bash
-      cd ~
-      mkdir downloads
-      cd downloads
-      wget https://repo.anaconda.com/archive/Anaconda3-2019.07-Linux-x86_64.sh
-      sudo bash Anaconda3-2019.07-Linux-x86_64.sh
-      exit
-      ```
-    
-    Restart ubunutu terminal
+```bash
+cd ~
+mkdir downloads
+cd downloads
+wget https://repo.anaconda.com/archive/Anaconda3-2019.07-Linux-x86_64.sh
+sudo bash Anaconda3-2019.07-Linux-x86_64.sh
+exit
+```
 
-      ```bash
-      cd ~
-      sudo chmod -R 777 anaconda3
-      conda install jupyter
-      ```
+Restart ubunutu terminal
+
+```bash
+cd ~
+sudo chmod -R 777 anaconda3
+conda install jupyter
+```
 
   * Jupyter Notebook  (DONT USE JUPYTER NOTEBOOK)
     * In Win10, goto start menu and select `Jupyter Notebook (Anaconda3)`
