@@ -55,20 +55,42 @@ If there is something wrong with your code, python will classify it as an *error
 
 *Exceptions*: the syntax is correct, but a `Traceback` message is produced because the code cannot be executed
 
+
 #### Handling Exceptions
 
+Here we will demonstrate how to handle exceptions
+
+Let's try to divide a number by zero in the python command line
 
 ```python
->>> x = 6
 >>> y = 2.0
->>> y / x
-0.3333333333333333
 >>> x = 0
 >>> y / x
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ZeroDivisionError: float division by zero
+>>>
 ```
 
+Note that you are given the line of the error (1 if you are executuing code line by line in the python terminal) and a useful message that indicates that a value was divided by zero.
+
+You can use `try:` and `except:` to handle exceptions and run alternative code if they occur.  While we printed a message, you could also change the value of x.
+
+```python
+>>> y = 16.0
+>>> x = 0.0
+>>> try:
+...     print(y / x)
+... except ZeroDivisionError:
+...     print("cannot divide by 0")
+...
+cannot divide by 0
+>>>
+```
 
 ### 4.6 Debugging
+
+This section will be smoother with Jupyter Notebook, but here I demonstrate with the python terminal. 
 
 Python debugger can be imported at the python command line
 
@@ -113,7 +135,7 @@ def get_expected_sqrt_x(distribution = "uniform",
 
 ```
 
-If you've done it correctly, it should not return anything
+If you've done it correctly, it should not return anything:
 
 ```python
 >>> def get_expected_sqrt_x(distribution = "uniform",
@@ -167,12 +189,88 @@ Traceback (most recent call last):
 ValueError: math domain error
 ```
 
+The normal feedback tells you where the errors occurred.  Now let's employ pdb to help with debugging by added `pdb.set_trace()` immediately after the function is defined.  Copy and paste this into your terminal to update the function:
+
+```python
+def get_expected_sqrt_x(distribution = "uniform",
+		par1 = 0,
+		par2 = 1,
+		sample_size = 10):
+	pdb.set_trace()
+	""" Calculate the expectation of sqrt(|X|)
+	where X is a random variable.
+	X can be either uniform or normal,
+	with parameters specified by the user;
+	before taking the square root, we take the
+	absolute value, to make sure it's positive.
+	"""
+	total = 0.0
+	for i in range(sample_size):
+		if distribution == "uniform":
+			z = uniform(par1, par2, 1)
+		elif distribution == "normal":
+			z = normal(par1, par2, 1)
+		else:
+			print("Unknown distribution. Quitting...")
+			return None
+		total = total + sqrt(z)
+	return total / sample_size
+
+```
+
+You should get no feedback.  Now run the command that caused the error again:
+
+```python
+>>> get_expected_sqrt_x("normal", 1, 0.5, 1000)
+> <stdin>(13)get_expected_sqrt_x()
+(Pdb)
+```
+
+Notice you are now in the pdb shell on line 13 of the `get_expected_sqrt_x()` function.  You can now execute the code line by line (I highly recommend viewing the function in its own file in notepad++ or bbedit so you can keep track of the line numbers). Here are some common pdb commands:
+* w(here) – Print the stack trace
+* d(own) – Move the current frame X number of levels down. Defaults to one.
+* u(p) – Move the current frame X number of levels up. Defaults to one.
+* b(reak) – With a *lineno* argument, set a break point at that line number in the current file / context
+* s(tep) – Execute the current line and stop at the next possible line
+* c(ontinue) – Continue execution
+
+Let's try out pdb and see how it helps us debug:
+
+```python
+# where am I?
+(Pdb) w
+  <stdin>(1)<module>()
+> <stdin>(13)get_expected_sqrt_x()
+
+# execute present line and step forward 1 line
+(Pdb) s
+> <stdin>(14)get_expected_sqrt_x()
+(Pdb) s
+> <stdin>(15)get_expected_sqrt_x()
+(Pdb) s
+> <stdin>(17)get_expected_sqrt_x()
+(Pdb) s
+> <stdin>(18)get_expected_sqrt_x()
+(Pdb) s
+> <stdin>(22)get_expected_sqrt_x()
+(Pdb) s
+> <stdin>(14)get_expected_sqrt_x()
+(Pdb) s
+
+# continue execution until done or error
+(Pdb) c
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 17, in get_expected_sqrt_x
+ValueError: math domain error
+>>>
+```
+
+While those pdb commands can be useful, we are right where we started.  Let's use pdb's test method on our function:
 
 ```python
 
 ```
-
-
 
 ```python
 def get_expected_sqrt_abs_x(distribution = "uniform",
