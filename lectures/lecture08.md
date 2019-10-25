@@ -90,13 +90,12 @@ cannot divide by 0
 
 ### 4.6 Debugging
 
-This section will be smoother with Jupyter Notebook, but here I demonstrate with the python terminal. 
+If you are following the text book, this section will be smoother with Jupyter Notebook, but here I demonstrate with the python terminal for the bold. 
 
 Python debugger can be imported at the python command line
 
 ```python
 >>> import pdb
-
 ```
 
 We are going to import some other functions to demonstrate debugging
@@ -189,7 +188,70 @@ Traceback (most recent call last):
 ValueError: math domain error
 ```
 
-The normal feedback tells you where the errors occurred.  Now let's employ pdb to help with debugging by added `pdb.set_trace()` immediately after the function is defined.  Copy and paste this into your terminal to update the function:
+The normal feedback tells you where the errors occurred.  Now let's employ pdb to help with debugging, using `pdb.pm()`. The `pm` stands for post mortem and will actually step you into the function you just ran, allowing you to evaluate what has happened by querying the variables.  Let's look at the value of each variable to see if we can figure out what's going wrong.
+
+```python
+>>> pdb.pm()
+> <stdin>(21)get_expected_sqrt_x()
+(Pdb) total
+28.025994520402385
+(Pdb) sample_size
+1000
+(Pdb) distribution
+'normal'
+(Pdb) z
+array([-0.58195987])
+(Pdb)
+```
+
+The debugger doesn't do everything for you.  You need to solve the mystery of why the code broke given the information that pdb helped you to retrieve.  Note that z is negative and we take the sqrt of it. That seems like it could cause an error...
+
+```python
+(Pdb) sqrt(z)
+*** ValueError: math domain error
+(Pdb) q
+>>>
+```
+
+We've found the bug!  An error occurs when taking the sqrt of z on line 21. Note that we used q to exit `pdb`.
+
+Now, let's crush that bug by taking the absolute value of z before applying sqrt.
+
+```python
+#note that I didn't change the name of the function, unlike in the book
+def get_expected_sqrt_x(distribution = "uniform",
+		par1 = 0,
+		par2 = 1,
+		sample_size = 10):
+	""" Calculate the expectation of sqrt(|X|)
+	where X is a random variable.
+	X can be either uniform or normal,
+	with parameters specified by the user;
+	before taking the square root, we take the
+	absolute value, to make sure it's positive.
+	"""
+	total = 0.0
+	for i in range(sample_size):
+		if distribution == "uniform":
+			z = uniform(par1, par2, 1)
+		elif distribution == "normal":
+			z = normal(par1, par2, 1)
+		else:
+			print("Unknown distribution. Quitting...")
+			return None
+		total = total + sqrt(abs(z))
+	return total / sample_size
+	
+```
+
+Test the code again
+
+```python
+>>> get_expected_sqrt_x("normal", 1, 0.5, 1000)
+0.9740756808415657
+```
+
+`pdb` had many functions, you can consult [it's documentation](https://docs.python.org/3/library/pdb.html).  One other common use of pdb is to set places in your code where the execution will stop, and you can take over control of running the code line by line. This allows you to query variables, as well as identify and troubleshoot problematic lines of code.  You can do this by adding `pdb.set_trace()` on any line of your code.  Copy and paste this into your terminal to update the function:
 
 ```python
 def get_expected_sqrt_x(distribution = "uniform",
@@ -213,12 +275,12 @@ def get_expected_sqrt_x(distribution = "uniform",
 		else:
 			print("Unknown distribution. Quitting...")
 			return None
-		total = total + sqrt(z)
+		total = total + sqrt(abs(z))
 	return total / sample_size
 
 ```
 
-You should get no feedback.  Now run the command that caused the error again:
+You should get no feedback.  Now run the function, and you will enter the pdb shell at the line where you called pdb.set_trace().
 
 ```python
 >>> get_expected_sqrt_x("normal", 1, 0.5, 1000)
@@ -233,8 +295,6 @@ Notice you are now in the pdb shell on line 13 of the `get_expected_sqrt_x()` fu
 * b(reak) – With a *lineno* argument, set a break point at that line number in the current file / context
 * s(tep) – Execute the current line and stop at the next possible line
 * c(ontinue) – Continue execution
-
-Let's try out pdb and see how it helps us debug:
 
 ```python
 # where am I?
@@ -259,12 +319,16 @@ Let's try out pdb and see how it helps us debug:
 
 # continue execution until done or error
 (Pdb) c
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-  File "<stdin>", line 17, in get_expected_sqrt_x
-ValueError: math domain error
+0.9805129283609519
 >>>
 ```
+
+We could have also checked the variable values along the way, or if we hit an error after entering `c`, we could have used pdb.pm() to investigate what when wrong.  When making functions, a best practice is to:
+* Write code
+* Set breakpoint with pdb.set_traceback()
+* Run new code line by line
+* Try new code by copying and pasting it into the debugger environment
+* Crush bugs
 
 While those pdb commands can be useful, we are right where we started.  Let's use pdb's test method on our function:
 
@@ -272,31 +336,7 @@ While those pdb commands can be useful, we are right where we started.  Let's us
 
 ```
 
-```python
-def get_expected_sqrt_abs_x(distribution = "uniform",
-		par1 = 0,
-		par2 = 1,
-		sample_size = 10):
-	""" Calculate the expectation of sqrt(|X|)
-	where X is a random variable.
-	X can be either uniform or normal,
-	with parameters specified by the user;
-	before taking the square root, we take the
-	absolute value, to make sure it's positive.
-	"""
-	total = 0.0
-	for i in range(sample_size):
-		if distribution == "uniform":
-			z = uniform(par1, par2, 1)
-		elif distribution == "normal":
-			z = normal(par1, par2, 1)
-		else:
-			print("Unknown distribution. Quitting...")
-			return None
-		total = total + sqrt(abs(z))
-	return total / sample_size
 
-```
 ```python
 
 ```
