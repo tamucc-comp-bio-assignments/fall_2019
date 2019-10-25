@@ -70,6 +70,9 @@ Project examples: automatically process data from experimental apparatus; image 
   * Grad Student Course Project: Commit at least 1 additional working function to your GitHub project repo, Due 10/18
 
 * [10/18  Week07 Writing Good Code](https://github.com/tamucc-comp-bio/fall_2019/blob/master/lectures/lecture07.md)
-  * Assignment 7, Due 10/25
+  * [Assignment 7, Due 10/25](https://github.com/tamucc-comp-bio/fall_2019/blob/master/assignments/assignment_7.md)
+  
+* [10/25  Week08 Writing Good Code](https://github.com/tamucc-comp-bio/fall_2019/blob/master/lectures/lecture08.md)
+  * Assignment 8, Due 10/25
     
 * [Summaries of Responses](https://github.com/comp-bio-fall-2019/Class_Info/blob/master/response_summaries.md)
