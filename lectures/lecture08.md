@@ -92,6 +92,8 @@ cannot divide by 0
 
 If you are following the text book, this section will be smoother with Jupyter Notebook, but here I demonstrate with the python terminal for the bold. 
 
+#### [`pdb`](https://docs.python.org/3/library/pdb.html)
+
 Python debugger can be imported at the python command line
 
 ```python
@@ -330,16 +332,51 @@ We could have also checked the variable values along the way, or if we hit an er
 * Try new code by copying and pasting it into the debugger environment
 * Crush bugs
 
-While those pdb commands can be useful, we are right where we started.  Let's use pdb's test method on our function:
+One last point on `pdb` is that you can run it on python scripts from the bash command line. See the [pdb manual page](https://docs.python.org/3/library/pdb.html).  Here's an example of how to do this: `python3 -m pdb myscript.py`
+
+
+#### Debugging Errors that Don't Cause Error Messages
+
+It is important to have a clear expectation of the result that your code should return.  This applies on the macro scale of an entire package, but also on the micro-scale of a particular line of code.  You can identify errors (generally these are human errors in logic) by knowing what the outcome should be, and testing that your code returns that value. Testing the extremes is always important when setting up tests.  Of course the way most of these types of errors creep in is when we assume that a particular line of code is too simple to need to test it.  In that case, test larger blocks of code.  Every line should be tested in one way or another.
+
+Python allows you to use assertions to help with the testing process.  This is a way for you to trigger your own error messages if an assertion is violated.
+
+Add the following function to your text editor, then run it in your terminal
 
 ```python
-
+import scipy #for log and exp
+import scipy.special #for binomial coefficient
+def compute_likelihood_binomial(p, successes, trials):
+	""" Compute the likelihood function for the binomial
+	model where p is the probability of success;
+	successes is the number of observed successes
+	out of trials
+	"""
+	assert p >= 0, "Negative probability"
+	assert p <= 1, "Probability > 1!"
+	assert successes <= trials, "More successes than trials!"
+	log_likelihood = successes * scipy.log(p) + (trials - successes) * scipy.log(1.0 - p)
+	return scipy.exp(log_likelihood) * scipy.special.binom (trials, successes)
+	
 ```
 
+Now let's test it
 
 ```python
-
+>>> compute_likelihood_binomial(0.5, 5, 10)
+0.24609375
+>>> compute_likelihood_binomial(-0.5, 5, 10)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 7, in compute_likelihood_binomial
+AssertionError: Negative probability
+>>>
 ```
+
+### Mind Expander 4.2
+
+Identify the bug in the `genetic_code.py` script in `~/CSB/good_code/data`. Note that the script assumes you are in the `sandbox` dir. 
+
 ```python
 
 ```
