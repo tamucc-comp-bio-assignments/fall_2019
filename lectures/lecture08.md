@@ -719,9 +719,40 @@ After calling the function: 22
 >>>
 ```
 
+### Chapter 6 Scientific Computing
+
+While we will not cover this chapter in detail, you may want to review it for your project or research.  It reviews numpy, scipy, pandas, and biopython.  
+
+* NumPy: adds vector and matrix data structures
+* SciPy: adds algebra, integration, differential equations, stats, and simulations
+* Pandas: manipulation, analysis, and visualization of data sets
+* Biopython: bioinformatics, connection to biological databases
+
+The are installation details in `~/CSB/scientific/installation`.  You can also consult the official [python package installation tutorial](https://packaging.python.org/tutorials/installing-packages/)
+
+I did the following in the bash shell to install biopython, given that we should all have anaconda:
+
+```bash
+cd ~
+# list inatalled packages
+conda list
+# I have numpy, scipy, and pandas
+# install biopython
+conda install biopython
+```
+
+Confirm installation of biopython in python3 terminal
+
+```python
+>>> from Bio import Entrez
+>>>
+```
+
+You will have to install at least some of the packages.
+
 ---
 
 
 ## HOMEWORK
-Assignment 7  Due 10/25  Finish Ch 4 and intermezzos
+
 
