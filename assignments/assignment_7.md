@@ -1,4 +1,4 @@
-# [Assignment 7](https://classroom.github.com/a/0OFx0uAZ)
+# [Assignment 7](https://classroom.github.com/a/P0NSUGYv)
 
 ## Due 10/18
 
@@ -27,4 +27,4 @@
 
 ## Submission
 
-[Submit updating this repo and pushing it to GitHub](https://classroom.github.com/a/0OFx0uAZ)
+[Submit updating this repo and pushing it to GitHub](https://classroom.github.com/a/P0NSUGYv)
