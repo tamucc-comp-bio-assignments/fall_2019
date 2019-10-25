@@ -25,7 +25,7 @@ ___
       ```
     
     Restart ubunutu terminal
-    
+
       ```bash
       cd ~
       sudo chmod -R 777 anaconda3
