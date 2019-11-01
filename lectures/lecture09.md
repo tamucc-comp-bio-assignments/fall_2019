@@ -1,8 +1,34 @@
 # Lecture 9: Scientific Computing, Ch 6
 
 ########################
-Copy and paste blurb from end of lecture 8 here.
-###########################
+### Chapter 6 Scientific Computing
+
+While we will not cover this chapter in completely, you may want to review all of it for your project or research.  It reviews numpy, scipy, pandas, and biopython.  
+
+* NumPy: adds vector and matrix data structures
+* SciPy: adds algebra, integration, differential equations, stats, and simulations
+* Pandas: manipulation, analysis, and visualization of data sets
+* Biopython: bioinformatics, connection to biological databases
+
+The are installation details in `~/CSB/scientific/installation`.  You can also consult the official [python package installation tutorial](https://packaging.python.org/tutorials/installing-packages/)
+
+I did the following in the bash shell to install biopython, given that we should all have anaconda:
+
+```bash
+cd ~
+# list inatalled packages
+conda list
+# I have numpy, scipy, and pandas
+# install biopython
+conda install biopython
+```
+
+Confirm installation of biopython in python3 terminal
+
+```python
+>>> from Bio import Entrez
+>>>
+```
 
 ## 6.2 Programming with `NumPy` & `SciPy`
 
@@ -10,7 +36,7 @@ These packages are typically used in concert and imported together.  Here we wil
 
 ```python
 >>> import numpy as np
->>>```
+```
 
 `NumPy` provides an `array` data structure.  An array can be one or more dimensions
 
@@ -734,11 +760,20 @@ Similarly, to produce a scatter plot, use
 To draw a box plot displaying the distributions of plumage scores for males and females, type
 
 ```python
-data[["Male_plumage_score", "Female_plumage_score"]].plot.box()
+>>> data[["Male_plumage_score", "Female_plumage_score"]].plot.box()
+<matplotlib.axes._subplots.AxesSubplot object at 0x7f9a3c20b358>
+>>> mpl.pyplot.show()
 ```
 
+![alt text](https://github.com/tamucc-comp-bio/fall_2019/tree/master/lectures/Week09_files/Capture7.PNG "image 7")
+
+This introduction presents only a few functions of the quite comprehensive pandas library. If you want to perform exploratory analysis of large data sets in Python, we recommend that you master this package. Section 6. 7 provides pointers to resources to further your understanding. Many of the ideas behind the pandas package are taken from R, which we will explore in chapters 8 and 9.
 
 ## 6.4 Biopython
+
+The Biopython project provides many standardized bioinformatics tools which, for example, facilitate the analysis and visualization of sequence data, the interface with data repositories, the parsing of popular file formats, and the integration of programs such as BLAST or Primer3.
+
+Biopython is not part of the standard Python library and needs to be installed. You can find instructions in `~/CSB/scientiftc/installation/install.md`. We should have accomplished this last week.
 
 ### 6.4.1 Retrieving Sequences from NCBI
 
