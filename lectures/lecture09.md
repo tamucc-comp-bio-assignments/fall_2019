@@ -698,7 +698,7 @@ The Entrez. read parser breaks the retrieved XML data down into individual parts
 
 Note that your counts and IDs might differ if more information about the inquisitive shrew mole has been uploaded since we ran our query.
 
-Now that we know what is available (using Entrez. search) we can fetch our sequence data using Entrez. efetch. We retrieve the first 10 sequences in PASTA format and save them to a file:
+Now that we know what is available (using Entrez. search) we can fetch our sequence data using Entrez. efetch. We retrieve the first 100 sequences in FASTA format and save them to a file:
 
 ```python
 # always tell NCBI who you are
@@ -706,7 +706,7 @@ Now that we know what is available (using Entrez. search) we can fetch our seque
 >>> handle = Entrez.efetch(db = "nuccore",
 ...     rettype = "fasta",
 ...     retmode = "text",
-...     id = id_list[:10])
+...     id = id_list[:100])
 
 #setup a handle to an output file
 >>> out_handle = open("Uropsilus_seq.fasta", "w")
@@ -714,6 +714,7 @@ Now that we know what is available (using Entrez. search) we can fetch our seque
 >>> for line in handle:
 ...     out_handle.write(line)
 ...
+
 88
 71
 71
@@ -872,249 +873,87 @@ Now that we know what is available (using Entrez. search) we can fetch our seque
 >>> handle.close()
 ```
 
-Take a look at your `sandbox` to confirm that the `Uropsilus_seq.fasta` file has been created properly.
-
-```bash
-$ less -S Uropsilus_seq.fasta
->MH210524.1 Uropsilus investigator voucher KIZ:2012121035 titin (TTN) gene, partial cds
-AACCGGTACGATAGTGGAAAATATACTCTGACACTAGAAAACAGCAGTGGAACGAAGTCTGCCTTTGTTA
-CTGTGAGGGTCCTGGACACACCAAGTCCGCCAGTTAACCTGAAAGTCACAGAAATCACCAAAAATTCTGT
-GTCGATTACATGGGAACCTCCTTTGTTGGATGGAGGCTCCAAAATCAAAAATTACATTGTTGAGAAACGT
-GAAGCCACAAGAAAGTCATATGCTGCAGTTGTAACAAATTGTCATAAGAATTCTTGGAAAATTGAACAAC
-TCCAAGAAGGTTGCAGCTATTACTTTAGAGTTACAGCTGAGAATGAGTATGGAATTGGCCTTCCTGCCCG
-CACAGCTGATCCAATTAAAGTTGCAGAAGTCCCACAACCTCCAGGAAAAATCACTGTGGATGATGTCACC
-AGAAACAGTGTCTCCTTGAGCTGGACAAAGCCCGAACATGATGGTGGCAGTAAAATCATTCAGTATATTG
-TGGAAATGCAGGCTAAGCACAGTGAAAAGTGGTCAGAGTGTGCTCGAGTAAAGACTCTTGAAGCAGTAAT
-TACCAACCTAACTCAGGGAGAAGAATATCTTTTTAGAGTTGTTGCTGTAAATGAAAAGGGAAGAAGTGAT
-CCCAGGTCCCTTGCAGTTCCAATAGTTGCCAAGGATCTGGTCATTGAGCCAGATGTAAGACCTGCATTCA
-GCAGTTACAGTGTACAAGTTGGGCAAGATTTGAAAATAGAAGTGCCAATTTCCGGACGCCCTAAGCCAAC
-CATTACTTGGACTAAAGATGATCTTCCACTGAAGCAGACCACAAGAATCAATGTTACAGATTCACTTGAT
-CTCACTGTCCTCAGTATAAAAGAAACCCATAAGGATGATGGTGGACATTATGGAATCACAGTGGCCAATG
-TTGTTGGCCAGAAAACAGCATCAATTGAAA
-...
-```
 
 ### 6.4.2 Input and Output of Sequence Data Using SeqIO
 
+Next, we use the module Seq IO to manipulate our sequences and obtain more information about our U. investigator results:
+
 ```python
-from Bio import SeqIO
-handle = open("Uropsilus_seq.fasta", "r")
-for record in SeqIO.parse(handle, "fasta"):
-print(record.description)
-print(len(record))
-handle.close()
-import re
-output_handle = open("Uropsilus_BMI1.fasta", "w")
+>>> from Bio import SeqIO
+>>> handle = open("Uropsilus_seq.fasta", "r")
+>>> for record in SeqIO.parse(handle, "fasta"):
+...     print(record.description)
+...     print(len(record))
+...
+
+MH210524.1 Uropsilus investigator voucher KIZ:2012121035 titin (TTN) gene, partial cds
+940
+MH210522.1 Uropsilus investigator voucher KIZ:GLGS2416 titin (TTN) gene, partial cds
+940
+MH210519.1 Uropsilus investigator voucher KIZ:GLGS1945 titin (TTN) gene, partial cds
+940
+MH210500.1 Uropsilus investigator voucher KIZ:201211262 titin (TTN) gene, partial cds
+940
+MH210498.1 Uropsilus investigator voucher KIZ:201211169 titin (TTN) gene, partial cds
+940
+MH210497.1 Uropsilus investigator voucher KIZ:201211160 titin (TTN) gene, partial cds
+940
+MH210496.1 Uropsilus investigator voucher KIZ:201211149 titin (TTN) gene, partial cds
+940
+MH210491.1 Uropsilus investigator voucher KIZ:201211136 titin (TTN) gene, partial cds
+940
+MH210382.1 Uropsilus investigator voucher KIZ:2012121035 recombination activating protein 2 (RAG2) gene, partial cds
+701
+MH210368.1 Uropsilus investigator voucher KIZ:201211262 recombination activating protein 2 (RAG2) gene, partial cds
+701
+MH210366.1 Uropsilus investigator voucher KIZ:201211169 recombination activating protein 2 (RAG2) gene, partial cds
+701
+MH210365.1 Uropsilus investigator voucher KIZ:201211160 recombination activating protein 2 (RAG2) gene, partial cds
+701
+MH210364.1 Uropsilus investigator voucher KIZ:201211149 recombination activating protein 2 (RAG2) gene, partial cds
+701
+MH210359.1 Uropsilus investigator voucher KIZ:201211136 recombination activating protein 2 (RAG2) gene, partial cds
+701
+MH210257.1 Uropsilus investigator voucher KIZ:2012121035 recombination activating protein 1 (RAG1) gene, partial cds
+1010
+MH210245.1 Uropsilus investigator voucher KIZ:201211262 recombination activating protein 1 (RAG1) gene, partial cds
+1010
+MH210243.1 Uropsilus investigator voucher KIZ:201211169 recombination activating protein 1 (RAG1) gene, partial cds
+700
+
+
+
+
+>>> handle.close()
+```
+
+SeqIO.parse returns a SeqRecord Python object that comes with several methods. Type record. and hit the Tab key in your Jupyter notebook to obtain a list of methods. Let us select only the records of the RAG1 gene and shorten our sequences before writing to a new file:
+
+#################################
+This code does not work, and you are not responsible for the rest of this document. I am keeping what follows so that I can just make a different example for a future class.
+
+The problems in the book code were multifold. I have this down to 1 problem.  The SeqIO line does not work.  
+
+```
+>>> import re
+
+```
+output_handle = open("Uropsilus_RAG1.fasta", "w")
 for record in SeqIO.parse("Uropsilus_seq.fasta", "fasta"):
-if re.search("BMI1", record.description):
-print(record.id)
-short_seq = record[:100]
-SeqIO.write(short_seq, output_handle, "fasta")
+	if re.search ("RAG1", record.description):
+		print(record.id)
+		short_seq = record[:100]
+		SeqIO.write(record.id, output_handle, "fasta")
+
 output_handle.close()
-```
 
-### 6.4.3 Programmatic BLAST Search
 
-```python
-from Bio.Blast import NCBIWWW
-handle = open("Uropsilus_BMI1.fasta", "r")
-records = list(SeqIO.parse(handle, "fasta"))
-print(records[3].id, " ", records[3].seq)
-Entrez.email = "me@bigu.edu"
-result_handle = NCBIWWW.qblast("blastn", "nt", records[3].seq)
-save_file = open("my_blast.xml", "w")
-save_file.write(result_handle.read())
-save_file.close()
-result_handle.close()
-```
+for record in SeqIO.parse("Uropsilus_seq.fasta", "fasta"):
+	print(record.id)
+	print(record.description)
+		short_seq = record[:100]
+		SeqIO.write(short_seq, output_handle, "fasta")
 
 
-
-```python
-from Bio.Blast import NCBIXML
-result_handle = open("my_blast.xml")
-blast_records = NCBIXML.read(result_handle)
-E_VALUE_THRESH = 0.04
-for alignment in blast_records.alignments:
-for hsp in alignment.hsps:
-if hsp.expect < E_VALUE_THRESH and alignment.length > 3000:
-print("****Alignment****")
-print("sequence:", alignment.title)
-print("length:", alignment.length)
-print("E value:", hsp.expect)
-print(hsp.query[0:75] + "...")
-print(hsp.match[0:75] + "...")
-print(hsp.sbjct[0:75] + "...")
-```
-
-
-### 6.4.4 Querying PubMed for Scientific Literature Information
-
-```python
-Entrez.email = "me@bigu.edu"
-handle = Entrez.esearch(
-db = "pubmed",
-term = ("spaetzle[Title/Abstract] AND Drosophila[ALL]"),
-usehistory = "y")
-record = Entrez.read(handle)
-handle.close()
-record["Count"]
-'13'
-webenv = record["WebEnv"]
-query_key = record["QueryKey"]
-```
-
-
-
-```python
-Entrez.email = "me@bigu.edu"
-handle = Entrez.efetch(db = "pubmed",
-rettype = "medline",
-retmode = "text",
-webenv = webenv,
-query_key = query_key)
-out_handle = open("Spaetzle_abstracts.txt", "w")
-data = handle.read()
-handle.close()
-out_handle.write(data)
-out_handle.close()
-import re
-with open("Spaetzle_abstracts.txt") as datafile:
-pubmed_input = datafile.read()
-pubmed_input = re.sub(r"\n\s{6}", " ", pubmed_input)
-for line in pubmed_input.split("\n"):
-if re.match("PMID", line):
-PMID = re.search(r"\d+", line).group()
-if re.match("AB", line):
-spaetzle = re.findall(r"([^.]*?Spaetzle[^.]*\.)", line)
-if spaetzle:
-print("PubMedID: ", PMID, " ", spaetzle)
-```
-
-
-
-```python
-
-```
-
-
-
-```python
-
-```
-
-
-
-```python
-
-```
-
-
-
-```python
-
-```
-
-
-
-```python
-
-```
-
-
-
-```python
-
-```
-
-
-
-```python
-
-```
-
-
-
-```python
-
-```
-
-
-
-```python
-
-```
-
-
-
-```python
-
-```
-
-
-
-```python
-
-```
-
-
-
-```python
-
-```
-
-
-
-```python
-
-```
-
-
-
-```python
-
-```
-
-
-
-```python
-
-```
-
-
-
-```python
-
-```
-
-
-
-```python
-
-```
-
-
-
-```python
-
-```
-
-
-
-```python
-
-```
-
-
-
-```python
-
-```
-
-
-
-```python
-
-```
 
 
