@@ -74,5 +74,8 @@ Project examples: automatically process data from experimental apparatus; image 
   
 * [10/25  Week08 Writing Good Code](https://github.com/tamucc-comp-bio/fall_2019/blob/master/lectures/lecture08.md)
   * [Assignment 8, Due 11/01](https://github.com/tamucc-comp-bio/fall_2019/blob/master/assignments/assignment_8.md)
+  
+* [11/01  Week09 Scientific Computing](https://github.com/tamucc-comp-bio/fall_2019/blob/master/lectures/lecture09.md)
+
     
 * [Summaries of Responses](https://github.com/comp-bio-fall-2019/Class_Info/blob/master/response_summaries.md)
