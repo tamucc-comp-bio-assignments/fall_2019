@@ -414,122 +414,6 @@ Using the mask (i.e., setting every pixel to either 0 or 1), we lost the informa
 
 We have developed a quantitative measure of NPF/NPFR1 expression from confocal images and this can now be easily automated and applied to many images.  This could be used to compare expression in different treatments.
 
-### 6.2.2 Random Numbers and Distributions
-
-```python
->>> import numpy as np
->>> np.random.random(2)
-array([0.38602011, 0.87405868])
->>> np.random.random_integers(5, size = 10)
-__main__:1: DeprecationWarning: This function is deprecated. Please call randint(1, 5 + 1) instead
-array([5, 3, 2, 3, 5, 2, 2, 4, 3, 2])
-```
-
-Here is an unplanned, teachable moment.  When a function is depricated, it means that it has been replaced and is no longer supported.  Here, we get some information, but not an exact solution.  It is up to us to figure out how to implement `randint()`.  If you have trouble, and quick internet search should work.  Here I used quick trial and error to figure out that this is the new implementation of the line of code from the book:
-
-```python
->>> np.random.randint(5, size =10)
-array([1, 0, 0, 2, 1, 2, 0, 2, 0, 0])
-
->>> np.random.randint(-5, -3, size = 4)
-array([-4, -4, -4, -5])
->>> a = np.arange(4)
->>> a
-array([0, 1, 2, 3])
-
->>> np.random.shuffle(a)
->>> a
-array([1, 0, 2, 3])
->>>
-
-np.random.beta(1/2, 1/2, 4)
-np.random.standard_normal(size = 3)
-np.random.normal(10, 0.1, 4)
-mus = [1, 3]
-cov = [[1, 0.3], [0.4, 2]]
-np.random.multivariate_normal(mus, cov, 3)
-
-print(np.random.random(1))
-print(np.random.random(1))
-np.random.seed(10)
-print(np.random.random(1))
-print(np.random.random(1))
-np.random.seed(10)
-print(np.random.random(1))
-print(np.random.random(1))
-```
-
-6.2.3 Linear Algebra
-
-```python
-import numpy as np
-import scipy
-import scipy.linalg
-M = scipy.random.random((3, 3))
-M
-scipy.linalg.eigvals(M)
-scipy.linalg.det(M)
-scipy.linalg.inv(M)
-np.dot(M, scipy.linalg.inv(M))
-```
-
-6.2.4 Integration and Dierential Equations
-
-```python
-import numpy as np
-import scipy.integrate
-def integrand(x):
-return ((x ** 2 - x) ** 4) / (1 + x ** 2)
-my_integral = scipy.integrate.quad(integrand, 0, 1)
-my_integral
-22 / 7 - my_integral[0]
-```
-
-
-
-```python
-import numpy as np
-import scipy
-import scipy.integrate
-def Gompertz(x, t, alpha, K):
-dxdt = x * alpha * np.log(K / x)
-return dxdt
-x0 = 0.1
-alpha = 1 / 2
-K = 5
-ts = np.arange(0, 10, 0.05)
-y = scipy.integrate.odeint(Gompertz, x0, ts, args = (alpha, K))
-import matplotlib.pyplot as plt
-plt.plot(ts, y[:,0])
-plt.xlabel("Time")
-plt.ylabel("x(t)")
-plt.show()
-%matplotlib inline
-import matplotlib.pyplot as plt
-plt.plot(t, x[:, 0], label = "x1")
-plt.plot(t, x[:, 1], label = "x2")
-plt.plot(t, x[:, 2], label = "x3")
-plt.legend(loc = "best")
-plt.xlabel("t")
-plt.grid()
-plt.show()
-```
-
-6.2.5 Optimization
-
-```python
-import numpy as np
-import scipy.optimize
-def my_eq(Sinf, a, r):
-return np.exp(-Sinf / (a / r)) - Sinf
-
-my_eq(0.6, 0.16, 1/13)
-my_eq(0.7, 0.16, 1/13)
-my_eq(0.71, 0.16, 1/13)
-scipy.optimize.root(my_eq, 0.01, args=(0.16, 1 / 13))
-
-```
-
 
 ## 6.3 Working with `pandas`
 
@@ -774,30 +658,240 @@ Biopython is not part of the standard Python library and needs to be installed. 
 
 ### 6.4.1 Retrieving Sequences from NCBI
 
+Many of the popular biological databases offer an application programming interface (API) that allows information to be accessed programmatically. Instead of manually accessing the website, entering search terms, and clicking your way to the desired data set, you can write a script that automatically queries the database and retrieves the data. The data are downloaded in a structured format, such as Extensible Markup Language (XML), making it both human readable and machine readable. Using APis automates your work flow, making it easy to scale up your analysis and facilitating the analysis within the Python environment.
+
+The National Center for Biotechnology Information (NCBI) not only offers an extensive API, but also the Entrez Programming Utilities (E-utilities)-a set of server-side programs to search and retrieve information. Biopython offers functions to interact directly with E-utilities. Let us see how it works by retrieving information about the inquisitive shrew mole (_Uropsilus investigator_):
+
 ```python
-from Bio import Entrez
-Entrez.email = "me@bigu.edu"
-handle = Entrez.esearch(
-db = "nuccore",
-term = ("Uropsilus investigator[Organism]"))
-record = Entrez.read(handle)
-handle.close()
-record.keys()
-dict_keys(['Count', 'RetMax', 'RetStart', 'IdList', 'TranslationSet', '
-TranslationStack', 'QueryTranslation'])
-record["Count"]
-id_list = record["IdList"]
-print(id_list)
-Entrez.email = "me@bigu.edu"
-handle = Entrez.efetch(db = "nuccore",
-rettype = "fasta",
-retmode = "text",
-id = id_list[:10])
-out_handle = open("Uropsilus_seq.fasta", "w")
-for line in handle:
-out_handle.write(line)
-out_handle.close()
-handle.close()
+# import package
+>>> from Bio import Entrez
+
+# provide your e-mail address to let NCBI know who you are
+>>> Entrez.email = "me@bigu.edu"
+>>> handle = Entrez.esearch(db = "nuccore", term = ("Uropsilus investigator[Organism]"))
+```
+
+The function Entrez. esearch allows us to search any of the databases hosted by N CBI, returning a handle to the results. A handle is a standardized "wrapper" around text information. Handles are useful for reading information incrementally, which is important for large data files. Handles are often used to pass information to a parser, such as the function Entrez. read:
+
+```python
+>>> record = Entrez.read(handle)
+>>> handle.close()
+
+# record is a dictionary, we can look at the keys
+>>> record.keys()
+dict_keys(['Count', 'RetMax', 'RetStart', 'IdList', 'TranslationSet', 'TranslationStack', 'QueryTranslation'])
+
+# your output may look different:
+# dictionaries have no natural order
+```
+
+The Entrez. read parser breaks the retrieved XML data down into individual parts, and transforms them into Python objects that can be accessed individually. Let us see how many sequences are available in the nucleotide database for our search term, and access the record IDs:
+
+```python
+>>> record["Count"]
+'118'
+# retrieve list of GenBank identifiers
+>>> id_list = record["IdList"]
+>>> print(id_list)
+['1631860235', '1631860231', '1631860225', '1631860187', '1631860183', '1631860181', '1631860179', '1631860169', '1631859951', '1631859923', '1631859919', '1631859917', '1631859915', '1631859905', '1631859701', '1631859677', '1631859673', '1631859671', '1631859669', '1631859659']
+```
+
+Note that your counts and IDs might differ if more information about the inquisitive shrew mole has been uploaded since we ran our query.
+
+Now that we know what is available (using Entrez. search) we can fetch our sequence data using Entrez. efetch. We retrieve the first 10 sequences in PASTA format and save them to a file:
+
+```python
+# always tell NCBI who you are
+>>> Entrez.email = "me@bigu.edu"
+>>> handle = Entrez.efetch(db = "nuccore",
+...     rettype = "fasta",
+...     retmode = "text",
+...     id = id_list[:10])
+
+#setup a handle to an output file
+>>> out_handle = open("Uropsilus_seq.fasta", "w")
+# write obtained sequence data to file
+>>> for line in handle:
+...     out_handle.write(line)
+...
+88
+71
+71
+71
+71
+71
+71
+71
+71
+71
+71
+71
+71
+71
+31
+1
+86
+71
+71
+71
+71
+71
+71
+71
+71
+71
+71
+71
+71
+71
+31
+1
+86
+71
+71
+71
+71
+71
+71
+71
+71
+71
+71
+71
+71
+71
+31
+1
+87
+71
+71
+71
+71
+71
+71
+71
+71
+71
+71
+71
+71
+71
+31
+1
+87
+71
+71
+71
+71
+71
+71
+71
+71
+71
+71
+71
+71
+71
+31
+1
+87
+71
+71
+71
+71
+71
+71
+71
+71
+71
+71
+71
+71
+71
+31
+1
+87
+71
+71
+71
+71
+71
+71
+71
+71
+71
+71
+71
+71
+71
+31
+1
+87
+71
+71
+71
+71
+71
+71
+71
+71
+71
+71
+71
+71
+71
+31
+1
+118
+71
+71
+71
+71
+71
+71
+71
+71
+71
+71
+2
+1
+117
+71
+71
+71
+71
+71
+71
+71
+71
+71
+71
+2
+1
+>>> out_handle.close()
+>>> handle.close()
+```
+
+Take a look at your `sandbox` to confirm that the `Uropsilus_seq.fasta` file has been created properly.
+
+```bash
+$ less -S Uropsilus_seq.fasta
+>MH210524.1 Uropsilus investigator voucher KIZ:2012121035 titin (TTN) gene, partial cds
+AACCGGTACGATAGTGGAAAATATACTCTGACACTAGAAAACAGCAGTGGAACGAAGTCTGCCTTTGTTA
+CTGTGAGGGTCCTGGACACACCAAGTCCGCCAGTTAACCTGAAAGTCACAGAAATCACCAAAAATTCTGT
+GTCGATTACATGGGAACCTCCTTTGTTGGATGGAGGCTCCAAAATCAAAAATTACATTGTTGAGAAACGT
+GAAGCCACAAGAAAGTCATATGCTGCAGTTGTAACAAATTGTCATAAGAATTCTTGGAAAATTGAACAAC
+TCCAAGAAGGTTGCAGCTATTACTTTAGAGTTACAGCTGAGAATGAGTATGGAATTGGCCTTCCTGCCCG
+CACAGCTGATCCAATTAAAGTTGCAGAAGTCCCACAACCTCCAGGAAAAATCACTGTGGATGATGTCACC
+AGAAACAGTGTCTCCTTGAGCTGGACAAAGCCCGAACATGATGGTGGCAGTAAAATCATTCAGTATATTG
+TGGAAATGCAGGCTAAGCACAGTGAAAAGTGGTCAGAGTGTGCTCGAGTAAAGACTCTTGAAGCAGTAAT
+TACCAACCTAACTCAGGGAGAAGAATATCTTTTTAGAGTTGTTGCTGTAAATGAAAAGGGAAGAAGTGAT
+CCCAGGTCCCTTGCAGTTCCAATAGTTGCCAAGGATCTGGTCATTGAGCCAGATGTAAGACCTGCATTCA
+GCAGTTACAGTGTACAAGTTGGGCAAGATTTGAAAATAGAAGTGCCAATTTCCGGACGCCCTAAGCCAAC
+CATTACTTGGACTAAAGATGATCTTCCACTGAAGCAGACCACAAGAATCAATGTTACAGATTCACTTGAT
+CTCACTGTCCTCAGTATAAAAGAAACCCATAAGGATGATGGTGGACATTATGGAATCACAGTGGCCAATG
+TTGTTGGCCAGAAAACAGCATCAATTGAAA
+...
 ```
 
 ### 6.4.2 Input and Output of Sequence Data Using SeqIO
