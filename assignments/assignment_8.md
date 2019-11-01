@@ -1,4 +1,4 @@
-# [Assignment 8](https://classroom.github.com/a/OpADEWLw)
+# [Assignment 8](https://classroom.github.com/a/fr6zKRPy)
 
 ## Due 11/01
 
@@ -18,7 +18,7 @@
 
 ## Description of Assignment 
 
-* [Complete exercises 4.10.1 and 4.10.2](https://classroom.github.com/a/OpADEWLw)
+* [Complete exercises 4.10.1 and 4.10.2](https://classroom.github.com/a/fr6zKRPy)
 
 ## Submission
 
