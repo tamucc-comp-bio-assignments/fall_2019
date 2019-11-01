@@ -1,8 +1,5 @@
 # Lecture 9: Scientific Computing, Ch 6
 
-########################
-### Chapter 6 Scientific Computing
-
 While we will not cover this chapter in completely, you may want to review all of it for your project or research.  It reviews numpy, scipy, pandas, and biopython.  
 
 * NumPy: adds vector and matrix data structures
