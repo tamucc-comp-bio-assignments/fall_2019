@@ -39,6 +39,20 @@ ___
 
 ## III. Mind Expanders
 
+[Mind Expander 8.1](https://forms.office.com/Pages/ResponsePage.aspx?id=8frLNKZngUepylFOslULZlFZdbyVx8RLiPt1GobhHnlUMFpONVRLSkNYUU9VQ1RXVzhGODBPTFM1UC4u)
+
+[Mind Expander 8.2]()
+
+[Mind Expander 8.3]()
+
+[Mind Expander 8.4]()
+
+[Mind Expander 8.5]()
+
+[Mind Expander 8.6]()
+
+[Mind Expander 8.7]()
+
 ---
 
 
