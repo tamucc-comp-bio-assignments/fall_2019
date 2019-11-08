@@ -13,6 +13,12 @@
 		```
 	* open ubuntu terminal, navigate to `CSB/r/sandbox` and type `R`
 	* open RStudio in Windows (see install instructions below)
+	* clone the [CSB dir](https://github.com/CSB-book/CSB) into your windows directory system
+	```bash
+	#pseudo code
+	cd /mnt/c/Users/YOURwindowsUSERname/Documents
+	git clone https://github.com/CSB-book/CSB.git
+	```
 
 	* If you are using an Ubuntu terminal that hasn't been setup (you'll know because it will ask you to create a new user name and password) or you notice odd cursor behavior when editing text in the terminal, then run the following code:
 		```bash
@@ -41,7 +47,7 @@ ___
 
 [Mind Expander 8.1](https://forms.office.com/Pages/ResponsePage.aspx?id=8frLNKZngUepylFOslULZlFZdbyVx8RLiPt1GobhHnlUMFpONVRLSkNYUU9VQ1RXVzhGODBPTFM1UC4u)
 
-[Mind Expander 8.2]()
+[Mind Expander 8.2](https://forms.office.com/Pages/ResponsePage.aspx?id=8frLNKZngUepylFOslULZlFZdbyVx8RLiPt1GobhHnlURDZQWkY5U1VSWU84WDU5Sk1HWE80NjdVVy4u)
 
 [Mind Expander 8.3]()
 
