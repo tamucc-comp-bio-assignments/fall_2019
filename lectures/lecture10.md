@@ -53,15 +53,12 @@ ___
 
 [Mind Expander 8.4](https://forms.office.com/Pages/ResponsePage.aspx?id=8frLNKZngUepylFOslULZlFZdbyVx8RLiPt1GobhHnlUMlRGTE9aQVQ3QUtBQlBOUEtHN1g3QUVDOS4u)
 
-[Mind Expander 8.5]()
-
-[Mind Expander 8.6]()
-
-[Mind Expander 8.7]()
+[Mind Expander 8.5](https://forms.office.com/Pages/ResponsePage.aspx?id=8frLNKZngUepylFOslULZlFZdbyVx8RLiPt1GobhHnlUMlIwMFNWME1IUVJCWktXWkZYSk1RV0pONC4u)
 
 ---
 
 
 ## HOMEWORK
 
+TBA
 
