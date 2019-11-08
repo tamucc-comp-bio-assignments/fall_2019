@@ -77,8 +77,11 @@ Project examples: automatically process data from experimental apparatus; image 
   
 * [11/01  Week09 Scientific Computing](https://github.com/tamucc-comp-bio/fall_2019/blob/master/lectures/lecture09.md)
   * [Exam 2, Due 11/08](https://classroom.github.com/a/VSNTwKf2)
-  
-  
 
+* [11/08  Week10 Statistical Computing I](https://github.com/tamucc-comp-bio/fall_2019/blob/master/lectures/lecture10.md)
+  * Assignment 10, Due 11/15
+
+  
+https://github.com/tamucc-comp-bio/fall_2019/blob/master/lectures/lecture10.md
     
 * [Summaries of Responses](https://github.com/comp-bio-fall-2019/Class_Info/blob/master/response_summaries.md)
