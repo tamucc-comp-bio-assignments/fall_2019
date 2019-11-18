@@ -1,4 +1,4 @@
-# [Assignment 11]()
+# [Assignment 11](https://classroom.github.com/a/2ids3KFf)
 
 ## Due 11/25
 
@@ -8,7 +8,7 @@
 
 ## Description of Assignment 
 
-* [Complete exercise 8.23.3]()
+* [Complete exercise 8.23.3](https://classroom.github.com/a/2ids3KFf)
 
 ## Submission
 
