@@ -86,7 +86,9 @@ Project examples: automatically process data from experimental apparatus; image 
   * No Assignment
 
 * [11/15  Week11 Statistical Computing II](https://github.com/tamucc-comp-bio/fall_2019/blob/master/lectures/lecture10.md)
-  * [Assignment 11, Due 11/25]()
+  * [Assignment 11, Due 11/25](https://classroom.github.com/a/2ids3KFf)
+  
+* [11/22  Week11 Data Wrangling and Visualization with The Tidyverse](https://github.com/tamucc-comp-bio/fall_2019/blob/master/lectures/lecture12.md)
 ---
     
 * [Summaries of Responses](https://github.com/comp-bio-fall-2019/Class_Info/blob/master/response_summaries.md)
