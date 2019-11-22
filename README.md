@@ -107,10 +107,10 @@ We have spent the semester learning:
 * distributing our work using GitHub
 
 #### Undergraduates:  
-I will issue a Final Exam in much the same way I've issued assignments. It will be due Wed Dec 13.
+I will issue a Final Exam in much the same way I've issued assignments. It will be due Wed Dec 11.
 
 #### Graduates
-Your "final" is completing your independent project (repo due 12/04, presentations Wed 12/13 at noon location TBA) where you automate the processing, analysis, and/or visualization of data
+Your "final" is completing your independent project (repo due 12/04, presentations Wed 12/11 at noon location TBA) where you automate the processing, analysis, and/or visualization of data
 
 ---
     
