@@ -89,7 +89,29 @@ Project examples: automatically process data from experimental apparatus; image 
   * [Assignment 11, Due 11/25](https://classroom.github.com/a/2ids3KFf)
   
 * [11/22  Week11 Data Wrangling and Visualization with The Tidyverse](https://github.com/tamucc-comp-bio/fall_2019/blob/master/lectures/lecture12.md)
-  * [Assignment 12, Due 12/04](https://classroom.github.com/a/1cpXbLT8)
+  * [Assignment 12, Due 12/04](https://classroom.github.com/a/1cpXbLT8) *Undergrads Only*
+  * Graduate students, push your completed independent projects to GitHub on 12/04
+
+---
+
+### Final Exam. "Welcome to the Real World"
+
+We have spent the semester learning: 
+* the philosophy of data science and linux
+* how to control a computer from the command line
+* the basics of 3 computer languages that are critical in processing, analyzing, and visualizing biological data
+  * `bash`
+  * `python`
+  * `R`
+* version controling our work using git
+* distributing our work using GitHub
+
+#### Undergraduates:  
+I will issue a Final Exam in much the same way I've issued assignments. It will be due Wed Dec 13.
+
+#### Graduates
+Your "final" is completing your independent project (repo due 12/04, presentations Wed 12/13 at noon location TBA) where you automate the processing, analysis, and/or visualization of data
+
 ---
     
 * [Summaries of Responses](https://github.com/comp-bio-fall-2019/Class_Info/blob/master/response_summaries.md)
