@@ -23,9 +23,9 @@ Upon the successful completion of this course, students should be able to:
 3.	Operate UNIX/LINUX computers from command line
 4.	Construct and modify computer programming/scripting logic structures for processing biological data
 5.	Use version control software (git) 
-6.	Describe and use regular expressions to query data
-7.	Typeset with LaTeX or MarkDown
-8.	Use the most popular open-source tools for biological data manipulation
+~~6.	Describe and use regular expressions to query data~~
+~~7.	Typeset with LaTeX or MarkDown~~
+8.	Use the most popular open-source tools for biological data manipulation: bash, python, R
 
 ## INSTRUCTIONAL METHODS AND ACTIVITIES
 
