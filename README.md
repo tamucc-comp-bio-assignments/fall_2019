@@ -97,17 +97,9 @@ Project examples: automatically process data from experimental apparatus; image 
 
 ---
 
-### Final Exam. "Welcome to the Real World"
+### [Final Exam. "Welcome to the Real World"](https://classroom.github.com/a/6VZJSzPA)
+Due 12/12 11:59 pm
 
-We have spent the semester learning: 
-* the philosophy of data science and linux
-* how to control a computer from the command line
-* the basics of 3 computer languages that are critical in processing, analyzing, and visualizing biological data
-  * `bash`
-  * `python`
-  * `R`
-* version controling our work using git
-* distributing our work using GitHub
 
 #### Undergraduates:  
 I will issue a Final Exam in much the same way I've issued assignments. It will be due Wed Dec 11.
