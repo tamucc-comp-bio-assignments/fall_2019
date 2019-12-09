@@ -98,14 +98,10 @@ Project examples: automatically process data from experimental apparatus; image 
 ---
 
 ### [Final Exam. "Welcome to the Real World"](https://classroom.github.com/a/6VZJSzPA)
-Due 12/12 11:59 pm
-
-
-#### Undergraduates:  
-I will issue a Final Exam in much the same way I've issued assignments. It will be due Wed Dec 11.
+Due 12/12 11:59 pm, Undergrads only
 
 #### Graduates
-Your "final" is completing your independent project (repo due 12/04, presentations Wed 12/11 at noon location TBA) where you automate the processing, analysis, and/or visualization of data
+Your "final" is completing your independent project (repo due 12/04, presentations Wed 12/11 at noon, same room as lecture) where you automate the processing, analysis, and/or visualization of data
 
 ---
     
