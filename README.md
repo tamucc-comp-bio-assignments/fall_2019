@@ -91,7 +91,7 @@ Project examples: automatically process data from experimental apparatus; image 
 * [11/15  Week11 Statistical Computing II](https://github.com/tamucc-comp-bio/fall_2019/blob/master/lectures/lecture10.md)
   * [Assignment 11, Due 11/25](https://classroom.github.com/a/2ids3KFf)
   
-* [11/22  Week11 Data Wrangling and Visualization with The Tidyverse](https://github.com/tamucc-comp-bio/fall_2019/blob/master/lectures/lecture12.md)
+* [11/22  Week12 Data Wrangling and Visualization with The Tidyverse](https://github.com/tamucc-comp-bio/fall_2019/blob/master/lectures/lecture12.md)
   * [Assignment 12, Due 12/04](https://classroom.github.com/a/1cpXbLT8) *Undergrads Only*
   * Graduate students, push your completed independent projects to GitHub on 12/04
 
