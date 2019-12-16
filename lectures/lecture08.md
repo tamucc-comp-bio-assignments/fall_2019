@@ -754,5 +754,5 @@ You will have to install at least some of the packages.
 
 
 ## HOMEWORK
-
+[Assignment 8](https://github.com/tamucc-comp-bio/fall_2019/blob/master/assignments/assignment_8.md)
 
