@@ -60,5 +60,5 @@ ___
 
 ## HOMEWORK
 
-TBA
+No Assignment This Week
 
